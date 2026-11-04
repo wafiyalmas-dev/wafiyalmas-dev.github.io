@@ -75,6 +75,9 @@ h3.g{font:700 1.2rem var(--head);margin:36px 0 14px}
 .pair{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
 .pair .shot{flex:0 0 170px;aspect-ratio:4/3}
 .job .logos{padding:0;align-self:start}
+/* LOGO PENGALAMAN KERJA: selebar kolom kanan, tinggi maksimal 260px (ubah angka ini kalau mau lebih besar/kecil) */
+.job .lg{width:100%;height:auto;max-height:260px;object-position:left center}
+@media (max-width:820px){.job .lg{width:auto;max-width:100%;max-height:180px}}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .chip{border:1.5px solid var(--line);background:transparent;color:var(--ink);padding:7px 16px;border-radius:99px;font:500 .95rem var(--body);cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--a1);border-color:var(--a1);color:var(--on-a1)}
