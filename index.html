@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Wafiy Almas Tsamar | Nanotechnology Engineer</title>
-<meta name="description" content="Portfolio of Wafiy Almas Tsamar: hydrogen energy, solar cells, battery recycling and advanced materials research.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description" content="Portfolio of Wafiy Almas Tsamar: hydrogen energy, Li-ion battery recycling, solar cells and advanced materials research.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
 :root{--bg:#f2f7f6;--surface:#fff;--ink:#0d2a30;--muted:#4d6a70;--line:#cfe0de;--a1:#007c78;--a2:#b86b00;--on-a1:#fff;--dot:0,124,120;--hi:184,107,0;
@@ -20,26 +19,31 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--a2);outline-offset:3px;border-radius:6px}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav{max-width:1080px;margin:auto;padding:12px 24px;display:flex;align-items:center;gap:20px}
+nav{max-width:1080px;margin:auto;padding:12px 24px;display:flex;align-items:center;gap:18px}
 nav .logo{font:800 1.15rem var(--head);text-decoration:none;margin-right:auto}
-nav a.l{text-decoration:none;color:var(--muted);font-size:.95rem;font-weight:500}
+nav a.l{text-decoration:none;color:var(--muted);font-size:.93rem;font-weight:500}
 nav a.l:hover{color:var(--a1)}
 #theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;padding:6px 14px;font:500 .9rem var(--body);cursor:pointer}
 main{max-width:1080px;margin:auto;padding:0 24px}
-.hero{position:relative;min-height:min(88vh,760px);display:flex;flex-direction:column;justify-content:center;padding:56px 0}
+.hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:center;padding:48px 0}
 #lattice{position:absolute;inset:0 -24px;width:calc(100% + 48px);height:100%;z-index:0}
-.hero>*:not(canvas){position:relative;z-index:1;pointer-events:none}
+.hero .in{position:relative;z-index:1;pointer-events:none;display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:center;width:100%}
 .hero a,.hero button{pointer-events:auto}
-.hero p.tag{font:500 1.05rem var(--body);color:var(--a2);margin:0 0 10px;min-height:1.7em}
-.hero h1{font:800 clamp(2.6rem,8vw,5.6rem)/1 var(--head);letter-spacing:-.03em;margin:0 0 20px}
-.hero p.lead{max-width:56ch;color:var(--muted);font-size:1.15rem;margin:0 0 28px}
+.tag{font:500 1.05rem var(--body);color:var(--a2);margin:0 0 10px;min-height:1.7em}
+.hero h1{font:800 clamp(2.6rem,7vw,5.2rem)/1 var(--head);letter-spacing:-.03em;margin:0 0 20px}
+.lead{max-width:54ch;color:var(--muted);font-size:1.12rem;margin:0 0 26px}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--a1)}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--a1);transition:transform .2s}
 .btn.p{background:var(--a1);color:var(--on-a1)}
 .btn:hover{transform:translateY(-2px)}
-.hint{margin-top:22px;font-size:.88rem;color:var(--muted)}
+.hint{margin-top:20px;font-size:.88rem;color:var(--muted)}
+.hex{--h:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);width:300px;aspect-ratio:.866;clip-path:var(--h);background:linear-gradient(150deg,var(--a1),var(--a2));padding:5px;justify-self:center}
+.hex div{position:relative;width:100%;height:100%;clip-path:var(--h);background:var(--surface);overflow:hidden}
+.hex img{position:absolute;width:170%;left:-37%;top:-52%;max-width:none}
 section{padding:72px 0;border-top:1px solid var(--line)}
-h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.1 var(--head);letter-spacing:-.02em;margin:0 0 28px}
+h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.1 var(--head);letter-spacing:-.02em;margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:62ch}
+h3.g{font:700 1.2rem var(--head);margin:36px 0 14px}
 .about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
 .about p{margin:0 0 14px;max-width:62ch}
 .stats{display:grid;gap:14px;align-content:start}
@@ -49,200 +53,197 @@ h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.1 var(--head);letter-spacing:-.02em;margi
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .chip{border:1.5px solid var(--line);background:transparent;color:var(--ink);padding:7px 16px;border-radius:99px;font:500 .95rem var(--body);cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--a1);border-color:var(--a1);color:var(--on-a1)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s;transform-style:preserve-3d}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s}
 .card:hover{border-color:var(--a1)}
 .card[hidden]{display:none}
-.card h3{font:700 1.25rem/1.2 var(--head);margin:0}
-.card p{margin:0;color:var(--muted);font-size:.98rem}
-.card .more{display:none;color:var(--ink)}
-.card.open .more{display:block}
-.card .tog{margin-top:auto;align-self:flex-start;background:none;border:0;color:var(--a1);font:600 .95rem var(--body);cursor:pointer;padding:4px 0}
+.card h3{font:700 1.2rem/1.25 var(--head);margin:0}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.card ul{display:none;margin:0;padding-left:18px;color:var(--ink);font-size:.95rem}
+.card.open ul{display:block}
+.tog{margin-top:auto;align-self:flex-start;background:none;border:0;color:var(--a1);font:600 .95rem var(--body);cursor:pointer;padding:4px 0}
+.shot{aspect-ratio:16/9;border-radius:10px;border:1.5px dashed var(--line);display:grid;place-items:center;color:var(--muted);font-size:.85rem;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
 .badge{align-self:flex-start;font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:99px;background:rgba(var(--hi),.16);color:var(--a2)}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tags span{font-size:.82rem;border:1px solid var(--line);border-radius:6px;padding:2px 8px;color:var(--muted)}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
 .skills h3{font:700 1.1rem var(--head);margin:0 0 12px}
 .pills{display:flex;flex-wrap:wrap;gap:8px}
 .pills span{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:5px 12px;font-size:.95rem;transition:.2s}
 .pills span:hover{background:var(--a1);color:var(--on-a1);border-color:var(--a1)}
 .tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--line)}
-.tl li{position:relative;padding:0 0 30px 18px}
+.tl li{position:relative;padding:0 0 28px 18px}
 .tl li::before{content:"";position:absolute;left:-30px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 4px var(--bg)}
 .tl time{font-size:.9rem;color:var(--a2);font-weight:600}
-.tl h3{font:700 1.15rem var(--head);margin:2px 0}
+.tl h4{font:700 1.15rem var(--head);margin:2px 0}
 .tl .org{color:var(--muted);margin:0 0 6px}
-.tl ul{margin:0;padding-left:18px;color:var(--muted);font-size:.98rem}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact{text-align:left}
+.tl ul{margin:0;padding-left:18px;color:var(--muted);font-size:.98rem;max-width:70ch}
+.tl img{display:block;max-width:420px;width:100%;border-radius:10px;margin-top:10px}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.certs .card{padding:12px;gap:8px}
+.certs h3{font:600 .95rem/1.3 var(--body)}
+.ach{margin:0;padding-left:20px}.ach li{margin-bottom:6px}
 .contact p{max-width:52ch;color:var(--muted)}
 footer{max-width:1080px;margin:auto;padding:28px 24px 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
-@media (max-width:760px){.about,.two{grid-template-columns:1fr}nav a.l{display:none}}
+@media (max-width:820px){.about{grid-template-columns:1fr}nav a.l{display:none}.hero .in{grid-template-columns:1fr;gap:28px}.hex{width:230px;order:-1;justify-self:start}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
 <header><nav aria-label="Main">
 <a class="logo" href="#top">Wafiy Almas</a>
-<a class="l" href="#about">About</a><a class="l" href="#projects">Projects</a><a class="l" href="#skills">Skills</a><a class="l" href="#experience">Experience</a><a class="l" href="#contact">Contact</a>
+<a class="l" href="#about">About</a><a class="l" href="#projects">Projects</a><a class="l" href="#experience">Experience</a><a class="l" href="#organizations">Organizations</a><a class="l" href="#achievements">Certificates</a><a class="l" href="#contact">Contact</a>
 <button id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
 </nav></header>
 
 <main id="top">
 <div class="hero">
 <canvas id="lattice" aria-hidden="true"></canvas>
-<p class="tag" id="typed" aria-live="off">Nanotechnology Engineer</p>
+<div class="in">
+<div>
+<p class="tag" id="typed">Nanotechnology Engineer</p>
 <h1>Wafiy Almas<br>Tsamar</h1>
-<p class="lead">Nanotechnology Engineering graduate from Universitas Airlangga. I research hydrogen energy, solar cell materials and battery recycling, and I’m looking for roles in R&amp;D and energy technology.</p>
-<div class="cta"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="mailto:wafiyalmas2018@gmail.com">Email me</a></div>
-<p class="hint">Move your cursor over the lattice to excite the atoms.</p>
+<p class="lead">Nanotechnology Engineering graduate from Universitas Airlangga. I work on Li-ion battery recycling, hydrogen technology and solar cell materials, and I’m looking for roles in R&amp;D, energy and manufacturing.</p>
+<div class="cta"><a class="btn p" href="CV_Wafiy_Almas_Tsamar.pdf" download>Download CV</a><a class="btn" href="#projects">See my projects</a><a class="btn" href="mailto:wafiyalmas2018@gmail.com">Email me</a></div>
+<p class="hint">Move your cursor over the graphene lattice to excite the atoms.</p>
 </div>
+<div class="hex"><div><img src="foto-profil.jpg" alt="Portrait of Wafiy Almas Tsamar in graduation attire"></div></div>
+</div></div>
 
 <section id="about"><h2>About me</h2>
 <div class="about">
 <div>
-<p>I hold a bachelor’s degree in Nanotechnology Engineering and work at the point where materials science meets energy. My research covers hydrogen production, hydrometallurgy, lithium-ion battery recycling, catalyst materials and semiconductor thin films for solar cells.</p>
-<p>In the lab I plan experiments, characterize materials (XRD, SEM-EDS, XRF, XPS, ICP-MS, BET), analyze the data and write the technical report. Outside the lab I have led teams: I chaired Airlangga Nanotechnology Week 3.0 and headed the Scientific Department of the student association.</p>
-<p>I’m open to roles in Engineering, R&amp;D, Renewable Energy, Advanced Materials, Battery Technology, Laboratory Analysis and Process Development.</p>
+<p>I’m a fresh Nanotechnology Engineering graduate (S.T., GPA 3.52/4.00) with hands-on research experience in advanced materials and energy technology. My work covers Li-ion battery recycling through hydrometallurgy and pyrometallurgy, hydrogen generation and measurement, and semiconductor nanomaterials for solar cells.</p>
+<p>I plan experiments, characterize materials (XRD, XPS, SEM-EDS, XRF, ICP-MS, BET), analyze the data and document the results. I also lead: I chaired Airlangga Nanotechnology Week as part of Airnology 3.0 and headed the Scientific Department of the student association.</p>
+<p>I’m open to roles in Engineering, R&amp;D, Renewable Energy, Advanced Materials, Battery Technology, Laboratory Analysis, Process Development and manufacturing.</p>
 </div>
 <div class="stats">
-<div class="stat"><b>1 year</b><span>Research Assistant at BRIN</span></div>
+<div class="stat"><b>3.52 / 4.00</b><span>GPA, B.Eng. Nanotechnology Engineering</span></div>
+<div class="stat"><b>1 year</b><span>Research at BRIN</span></div>
+<div class="stat"><b>100+</b><span>Companies reached through 3 hydrogen FGDs</span></div>
 <div class="stat"><b>2</b><span>Review articles co-authored (under review)</span></div>
-<div class="stat"><b>100+</b><span>Company directors and representatives reached through 3 hydrogen FGDs</span></div>
 </div>
 </div></section>
 
 <section id="projects"><h2>Projects and research</h2>
-<div class="filters" role="group" aria-label="Filter projects">
-<button class="chip" data-f="all" aria-pressed="true">All</button>
-<button class="chip" data-f="research" aria-pressed="false">Research</button>
-<button class="chip" data-f="publication" aria-pressed="false">Publications</button>
-<button class="chip" data-f="student" aria-pressed="false">Student projects</button>
-<button class="chip" data-f="leadership" aria-pressed="false">Events and leadership</button>
-</div>
-<div class="grid" id="grid">
-
-<article class="card" data-c="research"><span class="badge">Research · BRIN, 2025–2026</span><h3>Hydrogen, batteries and metallurgy research</h3>
-<p>Research assistant on hydrogen production technology, lithium-ion batteries, hydrometallurgy, pyrometallurgy and catalytic materials.</p>
-<p class="more">Responsible for experimental planning, laboratory work, data interpretation and scientific communication at BRIN’s Serpong site.</p>
-<div class="tags"><span>Hydrogen</span><span>Li-ion recycling</span><span>Catalysts</span></div>
-<button class="tog" aria-expanded="false">Read more</button></article>
-
-<article class="card" data-c="research"><span class="badge">Research · Universitas Airlangga, 2024–2025</span><h3>Semiconductor nanomaterials for thin-film solar cells</h3>
-<p>Synthesized and characterized semiconductor nanomaterials as absorber layers for thin-film solar cells.</p>
-<p class="more">Worked as a research project assistant, handling synthesis and material characterization for the solar cell research group.</p>
-<div class="tags"><span>Solar cells</span><span>Thin films</span><span>Characterization</span></div>
-<button class="tog" aria-expanded="false">Read more</button></article>
-
-<article class="card" data-c="publication"><span class="badge">Co-author · under review</span><h3>Kirigami and origami-inspired structures for flexible batteries and supercapacitors</h3>
-<p>Review article on folding and cutting designs that make energy storage devices flexible.</p>
-<p class="more">Manuscript co-authored during my time as a research project assistant. Status: under review.</p>
-<div class="tags"><span>Flexible batteries</span><span>Supercapacitors</span><span>Review</span></div>
-<button class="tog" aria-expanded="false">Read more</button></article>
-
-<article class="card" data-c="publication"><span class="badge">Co-author · under review</span><h3>Crafting a solar cell device integrated textile</h3>
-<p>Review article on building solar cells into fabrics for wearable power.</p>
-<p class="more">Manuscript co-authored during my time as a research project assistant. Status: under review.</p>
-<div class="tags"><span>Solar textile</span><span>Wearables</span><span>Review</span></div>
-<button class="tog" aria-expanded="false">Read more</button></article>
-
-<article class="card" data-c="student"><span class="badge">Student research group · ARGON, 2025</span><h3>Hydrogen-based electrolyzer system</h3>
-<p>Concept developer who led the conceptual design and coordination of a hydrogen electrolyzer system.</p>
-<p class="more">Also researcher in the Sensors and Electronics Division, where I helped develop the group’s organizational grand design and coordinated project development.</p>
-<div class="tags"><span>Electrolyzer</span><span>Sensors</span><span>Electronics</span></div>
-<button class="tog" aria-expanded="false">Read more</button></article>
-
-<article class="card" data-c="student"><span class="badge">PKM-GFT 2024 · funded by Kemdiktisaintek</span><h3>Smart Rice Estate</h3>
-<p>A concept that uses AI-based automation and nanotechnology to improve rice quality and yield for national rice self-sufficiency.</p>
-<p class="more">Received an incentive from the Ministry of Higher Education, Science and Technology (Program Kreativitas Mahasiswa).</p>
-<div class="tags"><span>AI</span><span>Nanotechnology</span><span>Agriculture</span></div>
-<button class="tog" aria-expanded="false">Read more</button></article>
-
-<article class="card" data-c="leadership"><span class="badge">Committee · BRIN and IFHE, 2025–2026</span><h3>Hydrogen focus group discussions with the Ministry of Energy</h3>
-<p>Coordinated and facilitated 3 FGDs on hydrogen technology and the energy transition with Kementerian ESDM EBTKE, bringing together directors from 100+ companies.</p>
-<p class="more">Also staffed the BRIN and Indonesia Fuel Cell and Hydrogen Energy (IFHE) booth at an exhibition at ICE BSD, Tangerang.</p>
-<div class="tags"><span>Event coordination</span><span>Energy policy</span></div>
-<button class="tog" aria-expanded="false">Read more</button></article>
-
-<article class="card" data-c="leadership"><span class="badge">Chairperson · 2024</span><h3>Airlangga Nanotechnology Week 3.0</h3>
-<p>Led the organizing committee, sponsorship and funding strategy, and partner MoUs for the faculty’s nanotechnology event.</p>
-<p class="more">Coordinated cross-functional teams and external stakeholders from planning through execution.</p>
-<div class="tags"><span>Leadership</span><span>Sponsorship</span><span>MoU</span></div>
-<button class="tog" aria-expanded="false">Read more</button></article>
-</div></section>
+<p class="sub">Research and student projects, kept separate from my work and organizational experience below.</p>
+<div class="filters" role="group" aria-label="Filter projects"></div>
+<div class="grid" id="grid"></div></section>
 
 <section id="skills"><h2>Skills and tools</h2>
-<div class="skills">
-<div><h3>Material characterization</h3><div class="pills"><span>XRD</span><span>SEM-EDS</span><span>XRF</span><span>XPS</span><span>ICP-MS</span><span>BET</span></div></div>
-<div><h3>Research focus</h3><div class="pills"><span>Hydrogen energy</span><span>Solar cells</span><span>Hydrometallurgy</span><span>Battery recycling</span><span>Catalysts</span></div></div>
-<div><h3>Technical</h3><div class="pills"><span>C++</span><span>Electronics</span><span>Laboratory experimentation</span><span>Data analysis</span><span>Technical reports</span></div></div>
-<div><h3>Working style</h3><div class="pills"><span>Leadership</span><span>Analytical thinking</span><span>Problem solving</span><span>Technical communication</span></div></div>
-</div></section>
+<div class="skills" id="skillbox"></div></section>
 
-<section id="experience"><h2>Experience</h2>
-<ol class="tl">
-<li><time>Aug 2025 – Jul 2026</time><h3>Research Assistant</h3><p class="org">BRIN, Serpong</p><ul><li>Hydrogen production, Li-ion batteries, hydrometallurgy, pyrometallurgy and catalytic materials.</li><li>Experimental planning, lab work, data interpretation and scientific communication.</li></ul></li>
-<li><time>Sep 2025 – Jun 2026</time><h3>Event Committee Member</h3><p class="org">BRIN, Serpong</p><ul><li>Coordinated 3 hydrogen FGDs with Kementerian ESDM EBTKE and 100+ companies.</li><li>Exhibitor for BRIN and IFHE at ICE BSD (Oct 2025 – Apr 2026).</li></ul></li>
-<li><time>Feb 2025 – Dec 2025</time><h3>Researcher, Sensors and Electronics Division</h3><p class="org">ARGON, Surabaya</p><ul><li>Concept developer of a hydrogen-based electrolyzer system.</li></ul></li>
-<li><time>Sep 2024 – Mar 2025</time><h3>Research Project Assistant</h3><p class="org">Universitas Airlangga</p><ul><li>Synthesized and characterized semiconductor nanomaterials for thin-film solar cells.</li><li>Co-authored two review manuscripts, both under review.</li></ul></li>
-<li><time>Feb 2024 – Sep 2024</time><h3>Chairperson, Airlangga Nanotechnology Week 3.0</h3><p class="org">Universitas Airlangga</p><ul><li>Led the committee, sponsorship strategy and partner MoUs.</li></ul></li>
-<li><time>Feb 2024 – Dec 2024</time><h3>Head of Scientific Department</h3><p class="org">Himpunan Mahasiswa Rekayasa Nanoteknologi</p><ul><li>Planned and ran research and academic programs with members.</li></ul></li>
-</ol>
-<div class="two" style="margin-top:20px">
-<div><h3 style="font:700 1.2rem var(--head)">Education</h3><p><b>B.Eng., Nanotechnology Engineering</b><br>Universitas Airlangga, Aug 2022 – Aug 2026</p></div>
-<div><h3 style="font:700 1.2rem var(--head)">Certifications</h3><p>Unit Operations in Chemical Engineering<br>Awareness Dasar-Dasar K3</p></div>
-</div></section>
+<section id="experience"><h2>Work experience</h2>
+<ol class="tl" id="work"></ol></section>
+
+<section id="organizations"><h2>Organizations and community</h2>
+<ol class="tl" id="orgs"></ol>
+<h3 class="g">Community service and outreach</h3>
+<ol class="tl" id="comm"></ol></section>
+
+<section id="achievements"><h2>Achievements and certificates</h2>
+<h3 class="g" style="margin-top:0">Achievements</h3>
+<ul class="ach">
+<li>Finalist, Kompetisi Ilmiah Mahasiswa (KIM) 2025, Universitas Airlangga</li>
+<li>Incentive recipient, Program Kreativitas Mahasiswa (PKM-GFT) 2024, Kemdiktisaintek</li>
+<li>Finalist, International Youth Summit 2024, Kuala Lumpur, Malaysia</li>
+</ul>
+<h3 class="g">Certifications and training</h3>
+<div class="certs" id="certs"></div></section>
 
 <section id="contact" class="contact"><h2>Let’s work together</h2>
-<p>I’m open to opportunities in R&amp;D, renewable energy, advanced materials and battery technology. The fastest way to reach me is email.</p>
-<div class="cta"><a class="btn p" href="mailto:wafiyalmas2018@gmail.com">wafiyalmas2018@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/wafiyalmas" target="_blank" rel="noopener">LinkedIn</a></div>
+<p>I’m open to opportunities in R&amp;D, renewable energy, advanced materials, battery technology and manufacturing. The fastest way to reach me is email.</p>
+<div class="cta"><a class="btn p" href="mailto:wafiyalmas2018@gmail.com">wafiyalmas2018@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/wafiyalmas" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="CV_Wafiy_Almas_Tsamar.pdf" download>Download CV</a></div>
 </section>
 </main>
-<footer>© 2026 Wafiy Almas Tsamar · Based in Indonesia</footer>
+<footer>© 2026 Wafiy Almas Tsamar · Jambi, Indonesia</footer>
 
 <script>
-(function(){
-var root=document.documentElement,btn=document.getElementById('theme');
-try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}
-btn.onclick=function(){var dark=getComputedStyle(root).colorScheme==='dark',n=dark?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}};
+/* ===== CONTENT: edit here. Set img:"file.jpg" to show a photo (file must sit next to index.html). ===== */
+var PROJECTS=[
+{c:"research",b:"Research project · Aug 2025 – Feb 2026",t:"Li-ion battery recycling: hydrometallurgy and pyrometallurgy",p:"Recycling of NMC, LCO, LMO and LFP cathodes, from thermal treatment to selective metal separation.",l:["Thermal treatment, carbothermic reduction, H3PO4 and H2SO4 leaching, and oxalic-acid precipitation.","Ni-Mn separation with Cyanex 272 by solvent extraction (SX).","Studied H2O2 as a reducing agent and its effect on metal recovery.","Characterized with XRD, XPS, SEM-EDS, XRF, ICP-MS and BET.","Linked manganese oxidation-state changes to material stability and leaching behavior."],g:["Battery recycling","Hydrometallurgy","Solvent extraction"],img:""},
+{c:"research",b:"Research project · May 2025 – Jun 2026",t:"Arduino-based automated hydrogen measurement system",p:"A low-cost system that measures hydrogen volume automatically during catalyst tests.",l:["Tested catalysts in alkaline conditions through NaBH4 hydrolysis at various temperatures.","Built the system with C++, ultrasonic sensors and the water displacement method.","Automated data logging to Microsoft Excel.","Calculated the Hydrogen Generation Rate (HGR) from the data."],g:["Arduino","C++","Hydrogen","Catalysts"],img:""},
+{c:"research",b:"Nanomaterials project · May 2025 – Jul 2026",t:"NiMn/NiO nanostructures using an AAO template",p:"Fabrication of NiMn/NiO nanostructures in anodic aluminum oxide templates by electrocoating.",l:["Aluminum anodization, pore widening and electrodeposition experiments.","Evaluated the electrochemical parameters that affect nanostructure formation."],g:["AAO template","Electrodeposition","Nanostructures"],img:""},
+{c:"research",b:"Research · AmrilLab, Sep 2024 – Apr 2025",t:"Semiconductor nanomaterials for solar cells and photocatalysis",p:"Synthesis and testing of materials for thin-film solar cells and photocatalysis.",l:["Synthesized CZTS, Ni-doped CZTS, BiOBr and Al-doped ZnO.","Evaluated solar cell performance with a solar simulator: PCE, FF, Voc and J-V curves.","Documented systematic tests and data analysis."],g:["CZTS","Solar cells","Photocatalysis"],img:""},
+{c:"publication",b:"Co-author · under review",t:"Kirigami and origami-inspired structures for (flexible) batteries and supercapacitors",p:"Review article on folding and cutting designs that make energy storage devices flexible.",l:[],g:["Flexible batteries","Supercapacitors","Review"],img:""},
+{c:"publication",b:"Co-author · under review",t:"Crafting a solar cell device integrated textile",p:"Review article on building solar cells into fabrics for wearable power.",l:[],g:["Solar textile","Wearables","Review"],img:""},
+{c:"student",b:"ARGON · May – Jul 2025",t:"Hydrogen electrolyzer project",p:"Led the conceptual design and coordination of a hydrogen-based electrolyzer system in the student research group.",l:["Coordinated project development across the group.","Worked with the sensors and electronics division."],g:["Electrolyzer","Hydrogen","Team lead"],img:""},
+{c:"student",b:"PKM-GFT 2024 · funded by Kemdiktisaintek",t:"Smart Rice Estate",p:"A concept using AI-based automation and nanotechnology to improve rice quality and yield for national rice self-sufficiency.",l:[],g:["AI","Nanotechnology","Agriculture"],img:""}
+];
+var FILTERS=[["all","All"],["research","Research"],["publication","Publications"],["student","Student projects"]];
+var SKILLS=[
+["Data and software",["Microsoft Excel","OriginPro","Python","C++","SOLIDWORKS","Gaussian","BIOVIA Materials Studio","HyperChem","ImageJ","DWISM"]],
+["Characterization",["XRD","XPS","SEM-EDS","XRF","ICP-MS","BET","Solar simulator (J-V)"]],
+["Technical knowledge",["Li-ion battery technology","Battery recycling","Hydrometallurgy","Pyrometallurgy","Hydrogen technology","Solar cells"]],
+["Professional",["Teamwork","Communication","Public speaking","Time management","Analytical thinking","Problem solving","Project coordination","Scientific writing","Leadership"]]];
+var WORK=[
+{d:"Aug 2025 – Jul 2026",t:"Research Intern (MBKM) and Event Committee Member",o:"BRIN, South Tangerang",l:["Researched hydrogen technology, fuel cells, electrolyzers and catalytic materials.","Organizing committee member for three hydrogen technology FGDs with Kementerian ESDM EBTKE and directors from 100+ companies.","Exhibitor and booth staff for BRIN and Indonesia Fuel Cell and Hydrogen Energy (IFHE) at ICE BSD, Tangerang.","Experimental planning, lab work, data interpretation and scientific communication."],img:""},
+{d:"Sep 2024 – Apr 2025",t:"Research Assistant",o:"Amrillah Renewable Energy Research Group (AmrilLab), Surabaya",l:["Synthesized and characterized semiconductor nanomaterials for thin-film solar cells and photocatalysis.","Evaluated solar cell performance and supported material development through testing and data analysis.","Co-authored two review articles, both under review."],img:""}];
+var ORGS=[
+{d:"Feb 2025 – Dec 2025",t:"ARGON Developer and Researcher, Sensors and Electronics Division",o:"Airlangga Student Research Group of Nanotechnology (ARGON)",l:["Developed ARGON’s organizational grand design.","Concept developer of a hydrogen-based electrolyzer system."],img:""},
+{d:"Feb 2024 – Dec 2025",t:"Head of Scientific Department",o:"Nanotechnology Engineering Student Association (HIMANO)",l:["Led research and academic activities and ran departmental programs with members."],img:""},
+{d:"Feb 2024 – Sep 2024",t:"Chairperson",o:"Airlangga Nanotechnology Week, part of Airnology 3.0",l:["Led the organizing committee and cross-functional teams from planning to execution.","Oversaw operations, sponsorship and funding strategy.","Drafted MoUs and coordinated external partners."],img:""},
+{d:"May 2023 – Jun 2023",t:"Person in Charge, Tutoring Class Program",o:"HIMANO",l:["Coordinated the tutoring class program."],img:""}];
+var COMM=[
+{d:"Jun 2025",t:"BEM FTMM x ARGON Community Outreach",o:"Gempol, Pasuruan",l:["Taught nanochitosan fertilizer production, from raw materials to a farmer-ready product, supported by SDGs UNAIR funding."],img:""},
+{d:"Dec 2024 – Jan 2025",t:"Belajar Bersama Komunitas (BBK)",o:"Made II, Sambikerep, Surabaya",l:["Taught mathematics to students and basic economics to local residents."],img:""},
+{d:"Sep 2023",t:"Organic Waste to Renewable Energy Outreach",o:"Sutorejo, Surabaya",l:["Promoted zero-waste living by teaching how organic waste becomes biogas."],img:""}];
+var CERTS=[["ISO/IEC 17025: Laboratory Management Systems",""],["ISO 9001:2026: Quality Management System",""],["Unit Operations in Chemical Engineering",""],["Basic Occupational Safety and Health (K3) Awareness",""],["Job Safety Analysis (JSA) and HIRADC Awareness",""],["Personal Protective Equipment (PPE/APD) Awareness",""],["Design and Analysis of Experiments (DoE)",""],["English Language Proficiency Test (ELPT)",""]];
 
-/* typing tagline */
-var tg=document.getElementById('typed'),words=['Nanotechnology Engineer','Hydrogen energy','Solar cell materials','Battery recycling'],wi=0,ci=0,del=false;
-var still=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-function type(){var w=words[wi];ci+=del?-1:1;tg.textContent=w.slice(0,ci)+'\u2009|';
+/* ===== RENDER ===== */
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function shot(img,label){return img?'<div class="shot"><img src="'+esc(img)+'" alt="'+esc(label)+'" loading="lazy"></div>':'<div class="shot">Photo coming soon</div>'}
+document.getElementById("grid").innerHTML=PROJECTS.map(function(p){
+return '<article class="card" data-c="'+p.c+'">'+shot(p.img,p.t)+'<span class="badge">'+esc(p.b)+'</span><h3>'+esc(p.t)+'</h3><p>'+esc(p.p)+'</p>'+(p.l.length?'<ul>'+p.l.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>':'')+'<div class="tags">'+p.g.map(function(x){return '<span>'+esc(x)+'</span>'}).join("")+'</div>'+(p.l.length?'<button class="tog" aria-expanded="false">Read more</button>':'')+'</article>'}).join("");
+document.querySelector(".filters").innerHTML=FILTERS.map(function(f,i){return '<button class="chip" data-f="'+f[0]+'" aria-pressed="'+(i===0)+'">'+f[1]+'</button>'}).join("");
+document.getElementById("skillbox").innerHTML=SKILLS.map(function(s){return '<div><h3>'+s[0]+'</h3><div class="pills">'+s[1].map(function(x){return '<span>'+esc(x)+'</span>'}).join("")+'</div></div>'}).join("");
+function tl(id,a){document.getElementById(id).innerHTML=a.map(function(e){return '<li><time>'+e.d+'</time><h4>'+esc(e.t)+'</h4><p class="org">'+esc(e.o)+'</p><ul>'+e.l.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>'+(e.img?'<img src="'+esc(e.img)+'" alt="'+esc(e.t)+'" loading="lazy">':'')+'</li>'}).join("")}
+tl("work",WORK);tl("orgs",ORGS);tl("comm",COMM);
+document.getElementById("certs").innerHTML=CERTS.map(function(c){return '<div class="card">'+shot(c[1],c[0])+'<h3>'+esc(c[0])+'</h3></div>'}).join("");
+
+(function(){
+var root=document.documentElement,btn=document.getElementById("theme");
+try{var s=localStorage.getItem("theme");if(s)root.setAttribute("data-theme",s)}catch(e){}
+btn.onclick=function(){var n=getComputedStyle(root).colorScheme==="dark"?"light":"dark";root.setAttribute("data-theme",n);try{localStorage.setItem("theme",n)}catch(e){}};
+var still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+var tg=document.getElementById("typed"),words=["Nanotechnology Engineer","Battery recycling","Hydrogen technology","Solar cell materials"],wi=0,ci=0,del=false;
+function type(){var w=words[wi];ci+=del?-1:1;tg.textContent=w.slice(0,ci)+"\u2009|";
 if(!del&&ci===w.length){del=true;return setTimeout(type,1500)}
 if(del&&ci===0){del=false;wi=(wi+1)%words.length}
 setTimeout(type,del?35:70)}
 if(!still)type();
 
-/* project filter + expand */
-var chips=document.querySelectorAll('.chip'),cards=document.querySelectorAll('.card');
-chips.forEach(function(c){c.onclick=function(){chips.forEach(function(x){x.setAttribute('aria-pressed',x===c)});
-cards.forEach(function(k){k.hidden=!(c.dataset.f==='all'||k.dataset.c===c.dataset.f)})}});
-document.querySelectorAll('.tog').forEach(function(b){b.onclick=function(){var k=b.parentNode,o=k.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Show less':'Read more'}});
+var chips=document.querySelectorAll(".chip"),cards=document.querySelectorAll("#grid .card");
+chips.forEach(function(c){c.onclick=function(){chips.forEach(function(x){x.setAttribute("aria-pressed",x===c)});cards.forEach(function(k){k.hidden=!(c.dataset.f==="all"||k.dataset.c===c.dataset.f)})}});
+document.querySelectorAll(".tog").forEach(function(b){b.onclick=function(){var o=b.parentNode.classList.toggle("open");b.setAttribute("aria-expanded",o);b.textContent=o?"Show less":"Read more"}});
 
-/* card tilt */
-if(!still)cards.forEach(function(k){k.addEventListener('mousemove',function(e){var r=k.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;k.style.transform='perspective(800px) rotateX('+(-y*5)+'deg) rotateY('+(x*5)+'deg)'});k.addEventListener('mouseleave',function(){k.style.transform=''})});
-
-/* atom lattice */
-var cv=document.getElementById('lattice'),cx=cv.getContext('2d'),pts=[],W,H,mx=-999,my=-999,dpr=Math.min(devicePixelRatio||1,2),GAP=46;
+/* graphene lattice: hexagonal honeycomb of carbon atoms */
+var cv=document.getElementById("lattice"),cx=cv.getContext("2d"),pts=[],edges=[],W,H,mx=-999,my=-999,dpr=Math.min(devicePixelRatio||1,2),A=30;
 function col(n){return getComputedStyle(root).getPropertyValue(n).trim()}
-function size(){var r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);pts=[];
-for(var y=GAP/2;y<H;y+=GAP)for(var x=GAP/2+((Math.round(y/GAP)%2)?GAP/2:0);x<W;x+=GAP)pts.push({hx:x,hy:y,x:x,y:y,vx:0,vy:0,e:0,p:Math.random()*6.28})}
-function draw(t){var a1=col('--dot'),hi=col('--hi');cx.clearRect(0,0,W,H);
-for(var i=0;i<pts.length;i++){var p=pts[i],dx=mx-p.hx,dy=my-p.hy,d=Math.sqrt(dx*dx+dy*dy),f=d<140?(140-d)/140:0;
-var tx=p.hx-(f?dx/d*f*26:0),ty=p.hy-(f?dy/d*f*26:0);
-if(!still){tx+=Math.cos(t/1800+p.p)*2;ty+=Math.sin(t/1700+p.p)*2}
-p.vx=(p.vx+(tx-p.x)*.08)*.82;p.vy=(p.vy+(ty-p.y)*.08)*.82;p.x+=p.vx;p.y+=p.vy;p.e+=((f>0?1:0)*f-p.e)*.12;
-for(var j=i+1;j<pts.length;j++){var q=pts[j],ex=q.x-p.x,ey=q.y-p.y;if(Math.abs(ex)>GAP*1.1||Math.abs(ey)>GAP*1.1)continue;var ed=Math.sqrt(ex*ex+ey*ey);
-if(ed<GAP*1.1){cx.strokeStyle='rgba('+a1+','+(.16+Math.max(p.e,q.e)*.5)+')';cx.lineWidth=1;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}}}
-for(i=0;i<pts.length;i++){p=pts[i];cx.fillStyle=p.e>.05?'rgba('+hi+','+(.4+p.e*.6)+')':'rgba('+a1+',.55)';cx.beginPath();cx.arc(p.x,p.y,2.2+p.e*4,0,6.283);cx.fill()}
+function build(){var r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+pts=[];edges=[];var map={},ek={},w=A*Math.sqrt(3),h=A*1.5;
+function vid(x,y){var k=Math.round(x)+","+Math.round(y);if(map[k]===undefined){map[k]=pts.length;pts.push({hx:x,hy:y,x:x,y:y,vx:0,vy:0,e:0,p:Math.random()*6.28})}return map[k]}
+for(var r0=-1;r0*h<H+A;r0++)for(var c0=-1;c0*w<W+w;c0++){var ox=c0*w+((r0&1)?w/2:0),oy=r0*h,ids=[],k;
+for(k=0;k<6;k++){var an=Math.PI/180*(60*k-30);ids.push(vid(ox+A*Math.cos(an),oy+A*Math.sin(an)))}
+for(k=0;k<6;k++){var a=ids[k],b=ids[(k+1)%6],key=a<b?a+"_"+b:b+"_"+a;if(!ek[key]){ek[key]=1;edges.push([a,b])}}}}
+function draw(t){var a1=col("--dot"),hi=col("--hi"),i,p,q,e;cx.clearRect(0,0,W,H);
+for(i=0;i<pts.length;i++){p=pts[i];var dx=mx-p.hx,dy=my-p.hy,d=Math.sqrt(dx*dx+dy*dy),f=d<130?(130-d)/130:0;
+var tx=p.hx-(f?dx/d*f*22:0),ty=p.hy-(f?dy/d*f*22:0);
+if(!still){tx+=Math.cos(t/1800+p.p)*1.6;ty+=Math.sin(t/1700+p.p)*1.6}
+p.vx=(p.vx+(tx-p.x)*.08)*.82;p.vy=(p.vy+(ty-p.y)*.08)*.82;p.x+=p.vx;p.y+=p.vy;p.e+=(f-p.e)*.12}
+cx.lineWidth=1;cx.strokeStyle="rgba("+a1+",.22)";cx.beginPath();
+var hot=[];for(i=0;i<edges.length;i++){e=edges[i];p=pts[e[0]];q=pts[e[1]];if(Math.max(p.e,q.e)<.04){cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y)}else hot.push(e)}
+cx.stroke();
+for(i=0;i<hot.length;i++){e=hot[i];p=pts[e[0]];q=pts[e[1]];cx.strokeStyle="rgba("+hi+","+(.25+Math.max(p.e,q.e)*.65)+")";cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}
+for(i=0;i<pts.length;i++){p=pts[i];cx.fillStyle=p.e>.04?"rgba("+hi+","+(.45+p.e*.55)+")":"rgba("+a1+",.6)";cx.beginPath();cx.arc(p.x,p.y,1.9+p.e*4.2,0,6.283);cx.fill()}
 requestAnimationFrame(draw)}
-size();addEventListener('resize',size);
+build();addEventListener("resize",build);
 var hero=cv.parentNode;
 function mv(e){var r=cv.getBoundingClientRect(),c=e.touches?e.touches[0]:e;mx=c.clientX-r.left;my=c.clientY-r.top}
-hero.addEventListener('mousemove',mv);hero.addEventListener('touchmove',mv,{passive:true});
-hero.addEventListener('mouseleave',function(){mx=my=-999});
+hero.addEventListener("mousemove",mv);hero.addEventListener("touchmove",mv,{passive:true});
+hero.addEventListener("mouseleave",function(){mx=my=-999});
 requestAnimationFrame(draw);
 })();
 </script>
