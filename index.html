@@ -177,6 +177,23 @@ footer{max-width:1280px;margin:auto;padding:28px 24px 40px;color:var(--muted);fo
 .pjp{aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
 .pjp img{width:100%;height:100%;object-fit:cover;display:block}
 .pjp .shot{height:100%;aspect-ratio:auto;border:0;border-radius:0;font-size:.8rem}
+
+/* ===== PDF / THESIS VIEWER ===== */
+.thn{font-size:.85rem;font-weight:600;color:var(--a2)}
+.pdfbtn{align-self:flex-start;background:var(--a1);color:var(--on-a1);border:0;border-radius:10px;padding:9px 16px;font:600 .95rem var(--body);cursor:pointer;transition:transform .15s}
+.pdfbtn:hover{transform:translateY(-2px)}
+.card.haspdf{cursor:pointer}
+.card.haspdf .tog,.card.haspdf .zm{cursor:auto}
+.pv{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.88);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 12px) 12px calc(env(safe-area-inset-bottom,0px) + 12px)}
+.pv[hidden]{display:none}
+.pvh{display:flex;gap:10px;align-items:center;flex-wrap:wrap;color:#fff;padding:0 4px 10px}
+.pvh h3{font:700 1rem/1.3 var(--head);margin:0;flex:1 1 260px;min-width:0}
+.pvh a,.pvh button{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:99px;padding:8px 16px;font:600 .9rem var(--body);cursor:pointer;text-decoration:none;white-space:nowrap}
+.pvn{background:var(--a2);color:#1a1100;border-radius:8px;padding:8px 12px;font-size:.88rem;font-weight:600;margin:0 4px 10px}
+.pvb{position:relative;flex:1;min-height:0;background:#fff;border-radius:8px;overflow:hidden}
+.pvb iframe{width:100%;height:100%;border:0;display:block}
+.pvm{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:24px;color:#333;background:#fff;font-size:1rem}
+.pvm.on{display:grid}
 </style>
 </head>
 <body>
@@ -264,7 +281,7 @@ var PROJECTS=[
 {c:"research",b:"Research · AmrilLab, Sep 2024 – Apr 2025",k:"project-solar-amrillab",t:"Semiconductor nanomaterials for solar cells and photocatalysis",p:"Synthesis and testing of materials for thin-film solar cells and photocatalysis.",l:["Synthesized CZTS, Ni-doped CZTS, BiOBr and Al-doped ZnO.","Evaluated solar cell performance with a solar simulator: PCE, FF, Voc and J-V curves.","Documented systematic tests and data analysis."],g:["CZTS","Solar cells","Photocatalysis"],img:""},
 {c:"publication",b:"Co-author · under review",k:"project-review-kirigami",t:"Kirigami and origami-inspired structures for (flexible) batteries and supercapacitors",p:"Review article on folding and cutting designs that make energy storage devices flexible.",l:[],g:["Flexible batteries","Supercapacitors","Review"],img:""},
 {c:"publication",b:"Co-author · under review",k:"project-review-textile",t:"Crafting a solar cell device integrated textile",p:"Review article on building solar cells into fabrics for wearable power.",l:[],g:["Solar textile","Wearables","Review"],img:""},
-{c:"publication",b:"In preparation · data collected and analyzed",k:"project-recovery-logam",t:"Recovery of Metals From Spent Li-ion Batteries Using Hydrometallurgy and Their Utilization as NiMn/NiO Nanocatalysts for NaBH₄ Hydrolysis in Hydrogen Production",p:"Manuscript in preparation. Data collection and data analysis are complete, and the paper is being written.",l:[],g:["Li-ion recycling","Nanocatalysts","Hydrogen production"],img:""},
+{c:"publication",b:"In preparation · data collected and analyzed",k:"project-recovery-logam",t:"Recovery of Metals From Spent Li-ion Batteries Using Hydrometallurgy and Their Utilization as NiMn/NiO Nanocatalysts for NaBH₄ Hydrolysis in Hydrogen Production",p:"Manuscript in preparation. Data collection and data analysis are complete, and the paper is being written.",l:[],g:["Li-ion recycling","Nanocatalysts","Hydrogen production"],img:"",pdf:"thesis-recovery-logam.pdf",pn:"Thesis (original version, before translation and journal submission)"},
 {c:"student",b:"ARGON · May – Jul 2025",k:"project-electrolyzer",t:"Hydrogen electrolyzer project",p:"Led the conceptual design and coordination of a hydrogen-based electrolyzer system in the student research group.",l:["Coordinated project development across the group.","Worked with the sensors and electronics division."],g:["Electrolyzer","Hydrogen","Team lead"],img:""},
 {c:"student",k:"project-nanokitosan",b:"Pengmas SDGs Universitas Airlangga 2025 · BEM FTMM & ARGON",t:"Inovasi Pupuk Nanokitosan Berbasis Limbah Sisik Ikan untuk Mendukung Pertanian Berkelanjutan di Dusun Karangploso, Desa Ngerong",p:"Proyek pendanaan Call for Pengmas SDGs Universitas Airlangga 2025 oleh BEM FTMM & ARGON UNAIR.",l:[],g:["Nanokitosan","Pupuk","Limbah sisik ikan","Pertanian berkelanjutan"],img:""},
 {c:"student",b:"PKM-GFT 2024 · funded by Kemdiktisaintek",k:"project-smart-rice",t:"Smart Rice Estate",p:"A concept using AI-based automation and nanotechnology to improve rice quality and yield for national rice self-sufficiency.",l:[],g:["AI","Nanotechnology","Agriculture"],img:""}
@@ -307,7 +324,7 @@ function shot(img,label){return img?'<div class="shot"><img src="'+esc(img)+'" a
 function lg(src,n){return '<img class="lg" src="'+esc(src)+'" alt="'+esc(n)+'" onerror="var f=document.createElement(\'span\');f.className=\'lg-fb\';f.textContent=this.alt;this.replaceWith(f)">'}
 document.getElementById("aboutlogos").innerHTML=lg("logo-unair.png","UNAIR")+lg("logo-ftmm.png","FTMM UNAIR");
 document.getElementById("grid").innerHTML=PROJECTS.map(function(p){
-return '<article class="card" data-c="'+p.c+'">'+'<div class="pjp">'+pic(p.k,p.t,"p")+'</div>'+'<span class="badge">'+esc(p.b)+'</span><h3>'+esc(p.t)+'</h3><p>'+esc(p.p)+'</p>'+(p.l.length?'<ul>'+p.l.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>':'')+'<div class="tags">'+p.g.map(function(x){return '<span>'+esc(x)+'</span>'}).join("")+'</div>'+(p.l.length?'<button class="tog" aria-expanded="false">Read more</button>':'')+'</article>'}).join("");
+return '<article class="card'+(p.pdf?' haspdf':'')+'"'+(p.pdf?' data-pdf="'+esc(p.pdf)+'" data-pt="'+esc(p.t)+'" data-pn="'+esc(p.pn)+'"':'')+' data-c="'+p.c+'">'+'<div class="pjp">'+pic(p.k,p.t,"p")+'</div>'+'<span class="badge">'+esc(p.b)+'</span><h3>'+esc(p.t)+'</h3><p>'+esc(p.p)+'</p>'+(p.l.length?'<ul>'+p.l.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>':'')+'<div class="tags">'+p.g.map(function(x){return '<span>'+esc(x)+'</span>'}).join("")+'</div>'+(p.pdf?'<p class="thn">'+esc(p.pn)+'</p><button class="pdfbtn" type="button">Read thesis (PDF)</button>':'')+(p.l.length?'<button class="tog" aria-expanded="false">Read more</button>':'')+'</article>'}).join("");
 document.querySelector(".filters").innerHTML=FILTERS.map(function(f,i){return '<button class="chip" data-f="'+f[0]+'" aria-pressed="'+(i===0)+'">'+f[1]+'</button>'}).join("");
 document.getElementById("skillbox").innerHTML=SKILLS.map(function(s){return '<div><h3>'+s[0]+'</h3><div class="pills">'+s[1].map(function(x){return '<span>'+esc(x)+'</span>'}).join("")+'</div></div>'}).join("");
 
@@ -348,6 +365,20 @@ li.addEventListener("pointermove",function(e){if(!ptr[e.pointerId])return;ptr[e.
 function pup(e){delete ptr[e.pointerId];pd=0;var k=Object.keys(ptr);if(k.length===1){var p=ptr[k[0]];sx=p.clientX;sy=p.clientY;stx=tx;sty=ty}}
 li.addEventListener("pointerup",pup);li.addEventListener("pointercancel",pup);
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!lb.hidden)closeLB()});
+/* viewer PDF skripsi */
+var pv=document.createElement("div");pv.className="pv";pv.hidden=true;pv.setAttribute("role","dialog");pv.setAttribute("aria-label","PDF viewer");
+pv.innerHTML='<div class="pvh"><h3></h3><a class="pvo" target="_blank" rel="noopener">Open in new tab</a><a class="pvd" download>Download</a><button type="button" class="pvx" aria-label="Close">Close ✕</button></div><p class="pvn"></p><div class="pvb"><iframe title="PDF"></iframe><div class="pvm"></div></div>';
+document.body.appendChild(pv);
+var pvf=pv.querySelector("iframe"),pvm=pv.querySelector(".pvm");
+function openPV(file,title,note){pv.querySelector("h3").textContent=title;pv.querySelector(".pvn").textContent="Note: this is my thesis, the "+note.replace(/^Thesis \(|\)$/g,"")+".";
+pv.querySelector(".pvo").href=file;pv.querySelector(".pvd").href=file;pvm.className="pvm";pvf.src="about:blank";pv.hidden=false;document.body.style.overflow="hidden";
+function load(){pvf.src=file+"#view=FitH"}
+if(location.protocol==="file:"){load();return}
+fetch(file,{method:"HEAD"}).then(function(r){if(r.ok)load();else throw 0}).catch(function(){pvm.textContent="The PDF is not available yet. Please check back soon.";pvm.className="pvm on"})}
+function closePV(){pv.hidden=true;pvf.src="about:blank";document.body.style.overflow=""}
+pv.querySelector(".pvx").onclick=closePV;
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!pv.hidden)closePV()});
+document.addEventListener("click",function(e){var c=e.target.closest&&e.target.closest(".card.haspdf");if(!c)return;if(e.target.closest(".tog,.zm,a"))return;openPV(c.dataset.pdf,c.dataset.pt,c.dataset.pn)});
 document.addEventListener("click",function(e){var m=e.target.closest&&e.target.closest(".zm");if(m&&m.tagName==="IMG")openLB(m.currentSrc||m.src,m.alt)});
 function tl(id,a){document.getElementById(id).innerHTML=a.map(function(e){return '<li><time>'+e.d+'</time><h4>'+esc(e.t)+'</h4><p class="org">'+esc(e.o)+'</p><ul>'+e.l.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>'+(e.img?'<img src="'+esc(e.img)+'" alt="'+esc(e.t)+'" loading="lazy">':'')+'</li>'}).join("")}
 
