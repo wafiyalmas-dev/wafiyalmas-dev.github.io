@@ -371,11 +371,14 @@ pv.innerHTML='<div class="pvh"><h3></h3><a class="pvo" target="_blank" rel="noop
 document.body.appendChild(pv);
 var pvf=pv.querySelector("iframe"),pvm=pv.querySelector(".pvm");
 function openPV(file,title,note){pv.querySelector("h3").textContent=title;pv.querySelector(".pvn").textContent="Note: this is my thesis, the "+note.replace(/^Thesis \(|\)$/g,"")+".";
-pv.querySelector(".pvo").href=file;pv.querySelector(".pvd").href=file;pvm.className="pvm";pvf.src="about:blank";pv.hidden=false;document.body.style.overflow="hidden";
+pv.querySelector(".pvo").href=file;pv.querySelector(".pvd").href=file;pvm.className="pvm";pvf.src="about:blank";pv.hidden=false;document.body.style.overflow="hidden";if(file===TH.pdf)try{history.replaceState(null,"","#thesis")}catch(e){}
 function load(){pvf.src=file+"#view=FitH"}
 if(location.protocol==="file:"){load();return}
 fetch(file,{method:"HEAD"}).then(function(r){if(r.ok)load();else throw 0}).catch(function(){pvm.textContent="The PDF is not available yet. Please check back soon.";pvm.className="pvm on"})}
-function closePV(){pv.hidden=true;pvf.src="about:blank";document.body.style.overflow=""}
+function closePV(){pv.hidden=true;pvf.src="about:blank";document.body.style.overflow="";if(location.hash==="#thesis")try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}}
+var TH=PROJECTS.filter(function(p){return p.pdf})[0];
+function chk(){if(TH&&location.hash==="#thesis"&&pv.hidden)openPV(TH.pdf,TH.t,TH.pn)}
+addEventListener("hashchange",chk);chk();
 pv.querySelector(".pvx").onclick=closePV;
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!pv.hidden)closePV()});
 document.addEventListener("click",function(e){var c=e.target.closest&&e.target.closest(".card.haspdf");if(!c)return;if(e.target.closest(".tog,.zm,a"))return;openPV(c.dataset.pdf,c.dataset.pt,c.dataset.pn)});
