@@ -63,10 +63,10 @@ h3.g{font:700 1.2rem var(--head);margin:36px 0 14px}
 .lg{height:100px;width:auto;max-width:100%;object-fit:contain;display:block}
 @media (max-width:820px){.lg{height:80px}}
 /* UKURAN LOGO TERPISAH (About): ubah angka masing-masing */
-.lg[src$="unair.png"]{height:125px}
-.lg[src$="ftmm.png"]{height:88px}
-@media (max-width:820px){.lg[src$="unair.png"]{height:80px}.lg[src$="ftmm.png"]{height:80px}}
-.lg[src$="amrillab.png"]{border-radius:12px}
+.lg[data-n="unair"]{height:125px}
+.lg[data-n="ftmm"]{height:88px}
+@media (max-width:820px){.lg[data-n="unair"]{height:80px}.lg[data-n="ftmm"]{height:80px}}
+.lg[data-n="amrillab"]{border-radius:12px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lg{background:#fff;border-radius:14px;padding:8px 12px}}
 :root[data-theme="dark"] .lg{background:#fff;border-radius:14px;padding:8px 12px}
 .lg-fb{font:700 1.1rem var(--head);color:var(--muted)}
@@ -194,6 +194,8 @@ footer{max-width:1280px;margin:auto;padding:28px 24px 40px;color:var(--muted);fo
 .pvb iframe{width:100%;height:100%;border:0;display:block}
 .pvm{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:24px;color:#333;background:#fff;font-size:1rem}
 .pvm.on{display:grid}
+footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 24px);transform:translateX(-50%);z-index:90;max-width:min(92vw,420px);background:#111;color:#fff;padding:12px 18px;border-radius:12px;font-size:.95rem;box-shadow:0 8px 24px rgba(0,0,0,.4)}
 </style>
 </head>
 <body>
@@ -205,6 +207,7 @@ footer{max-width:1280px;margin:auto;padding:28px 24px 40px;color:var(--muted);fo
 <header><nav aria-label="Main">
 <a class="logo" href="#top">Wafiy Almas</a>
 <a class="l" href="#about">About</a><a class="l" href="#experience">Experience</a><a class="l" href="#projects">Projects</a><a class="l" href="#organizations">Organizations</a><a class="l" href="#achievements">Certificates</a><a class="l" href="#contact">Contact</a>
+<a class="l" id="devnav" href="#dev">Developer</a>
 <button id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
 </nav></header>
 
@@ -215,27 +218,22 @@ footer{max-width:1280px;margin:auto;padding:28px 24px 40px;color:var(--muted);fo
 <div>
 <p class="tag" id="typed">Nanotechnology Engineer</p>
 <h1>Wafiy Almas<br>Tsamar</h1>
-<p class="lead">Nanotechnology Engineering Graduate | Ex-Intern at BRIN RI &amp; IFHE | Passionate about Energy &amp; Advanced Materials in Li-ion Battery, Solar Cells, Hydrogen Energy, &amp; Precious Metal Refinery.<span style="display:block;margin-top:10px">I’m looking for roles in R&amp;D, energy, manufacturing and management trainee programs, and I’m open to Process Engineer roles: familiar with OEE, SOPs, and BFD/PFD/P&amp;ID reading (certified).</span></p>
+<p class="lead"><span data-t="lead1">Nanotechnology Engineering Graduate | Ex-Intern at BRIN RI &amp; IFHE | Passionate about Energy &amp; Advanced Materials in Li-ion Battery, Solar Cells, Hydrogen Energy, &amp; Precious Metal Refinery.</span><span data-t="lead2" style="display:block;margin-top:10px">I’m looking for roles in R&amp;D, energy, manufacturing and management trainee programs, and I’m open to Process Engineer roles: familiar with OEE, SOPs, and BFD/PFD/P&amp;ID reading (certified).</span></p>
 <div class="cta"><a class="btn p" href="CV_Wafiy_Almas_Tsamar.pdf" download>Download CV</a><a class="btn" href="#projects">See my projects</a></div>
 <p class="hint">Move your cursor over the graphene lattice to excite the atoms.</p>
 </div>
-<div class="portrait"><img src="foto-profil.jpg" alt="Portrait of Wafiy Almas Tsamar in graduation attire"></div>
+<div class="portrait"><img id="heroimg" src="foto-profil.jpg" alt="Portrait of Wafiy Almas Tsamar in graduation attire"></div>
 </div></div>
 
 <section id="about"><h2>About me</h2>
 <div id="abouthd"></div>
 <div class="about" style="margin-top:28px">
 <div>
-<p>I’m a fresh Nanotechnology Engineering graduate (S.T., GPA 3.52/4.00) with hands-on research experience in advanced materials and energy technology. My work covers Li-ion battery recycling through hydrometallurgy and pyrometallurgy, hydrogen generation and measurement, and semiconductor nanomaterials for solar cells, and I’m especially interested in precious metal refinery.</p>
-<p>I plan experiments, characterize materials (XRD, XPS, SEM-EDS, XRF, ICP-MS, BET, UV-Vis, FTIR), analyze the data and document the results.</p>
+<p data-t="about1">I’m a fresh Nanotechnology Engineering graduate (S.T., GPA 3.52/4.00) with hands-on research experience in advanced materials and energy technology. My work covers Li-ion battery recycling through hydrometallurgy and pyrometallurgy, hydrogen generation and measurement, and semiconductor nanomaterials for solar cells, and I’m especially interested in precious metal refinery.</p>
+<p data-t="about2">I plan experiments, characterize materials (XRD, XPS, SEM-EDS, XRF, ICP-MS, BET, UV-Vis, FTIR), analyze the data and document the results.</p>
 <h3>Leadership</h3>
-<ul class="lead-list">
-<li><a href="#org-anw"><b>Chairperson</b></a>, Airlangga Nanotechnology Week (Airnology 3.0), 2024. Led the organizing committee, sponsorship and funding strategy, and partner MoUs.</li>
-<li><a href="#org-himano"><b>Head of Scientific Department</b></a>, Nanotechnology Engineering Student Association (HIMANO), 2024–2025.</li>
-<li><a href="#job-brin"><b>Event committee member</b></a>, three hydrogen FGDs at BRIN with Kementerian ESDM EBTKE, reaching directors and representatives from 100+ energy companies.</li>
-<li><a href="#org-argon"><b>Developer and concept lead</b></a>, ARGON student research group: its organizational grand design and a hydrogen electrolyzer system.</li>
-</ul>
-<p>I’m open to roles in Engineering, R&amp;D, Renewable Energy, Advanced Materials, Battery Technology, Laboratory Analysis, Process Development, manufacturing and management trainee programs. I’m also open to <b>Process Engineer</b> roles: familiar with OEE, SOPs, and BFD/PFD/P&amp;ID reading (certified).</p>
+<ul class="lead-list" id="leadlist"></ul>
+<p data-t="about3">I’m open to roles in Engineering, R&amp;D, Renewable Energy, Advanced Materials, Battery Technology, Laboratory Analysis, Process Development, manufacturing and management trainee programs. I’m also open to <b>Process Engineer</b> roles: familiar with OEE, SOPs, and BFD/PFD/P&amp;ID reading (certified).</p>
 </div>
 <div class="stats">
 <div class="stat"><b>3.52 / 4.00</b><span>GPA, B.Eng. Nanotechnology Engineering</span></div>
@@ -248,7 +246,7 @@ footer{max-width:1280px;margin:auto;padding:28px 24px 40px;color:var(--muted);fo
 <div id="work"></div></section>
 
 <section id="projects"><h2>Projects and research</h2>
-<p class="sub">Research and student projects, kept separate from my work and organizational experience.</p>
+<p class="sub" data-t="projsub">Research and student projects, kept separate from my work and organizational experience.</p>
 <div class="filters" role="group" aria-label="Filter projects"></div>
 <div class="grid" id="grid"></div></section>
 
@@ -265,11 +263,11 @@ footer{max-width:1280px;margin:auto;padding:28px 24px 40px;color:var(--muted);fo
 <div class="certs" id="certs"></div></section>
 
 <section id="contact" class="contact"><h2>Let’s work together</h2>
-<p>I’m open to opportunities in R&amp;D, renewable energy, advanced materials, battery technology, manufacturing and management trainee programs, and to Process Engineer roles (familiar with OEE, SOPs, and BFD/PFD/P&amp;ID reading, certified). Reach me through the icons at the bottom right (email, LinkedIn and WhatsApp), or download my CV.</p>
+<p data-t="contact">I’m open to opportunities in R&amp;D, renewable energy, advanced materials, battery technology, manufacturing and management trainee programs, and to Process Engineer roles (familiar with OEE, SOPs, and BFD/PFD/P&amp;ID reading, certified). Reach me through the icons at the bottom right (email, LinkedIn and WhatsApp), or download my CV.</p>
 <div class="cta"><a class="btn p" href="CV_Wafiy_Almas_Tsamar.pdf" download>Download CV</a></div>
 </section>
 </main>
-<footer>© 2026 Wafiy Almas Tsamar · Jambi, Indonesia</footer>
+<footer><span data-t="footer">© 2026 Wafiy Almas Tsamar · Jambi, Indonesia</span> · <a id="devlink" href="#dev">Developer</a></footer>
 
 <script>
 /* ===== CONTENT: edit here. Set img:"file.jpg" to show a photo (file must sit next to index.html). ===== */
@@ -318,28 +316,25 @@ var ORGS=[
 var ACH=[["Kompetisi Ilmiah Mahasiswa (KIM) 2025","Finalist · Universitas Airlangga","sertifikat-kim-2025"],["Program Kreativitas Mahasiswa (PKM-GFT) 2024","Incentive recipient · Kemdiktisaintek","sertifikat-pkm-2024"],["International Youth Summit 2024","Finalist · Kuala Lumpur, Malaysia","sertifikat-iys-2024"]];
 var CERTS=[["Supply Chain: MPS, RCCP, MRP, DRP, BOM","sertifikat-supply-chain"],["How to Read P&ID, PFD & BFD Used in a Process Plant","sertifikat-pid-pfd-bfd"],["Measuring Manufacturing Effectiveness: OEE, OOE, and TEEP","sertifikat-oee"],["Lean Six Sigma Black Belt","sertifikat-lean-six-sigma"],["ISO/IEC 17025: Laboratory Management Systems","sertifikat-iso-17025"],["ISO 9001:2026: Quality Management System","sertifikat-iso-9001"],["Unit Operations in Chemical Engineering","sertifikat-unit-operations"],["Basic Occupational Safety and Health (K3) Awareness","sertifikat-k3"],["Job Safety Analysis (JSA) and HIRADC Awareness","sertifikat-jsa-hiradc"],["Personal Protective Equipment (PPE/APD) Awareness","sertifikat-ppe"],["Design and Analysis of Experiments (DoE)","sertifikat-doe"],["English Language Proficiency Test (ELPT)","sertifikat-elpt"]];
 
-/* ===== RENDER ===== */
-function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
-function shot(img,label){return img?'<div class="shot"><img src="'+esc(img)+'" alt="'+esc(label)+'" loading="lazy"></div>':'<div class="shot">Photo coming soon</div>'}
-function lg(src,n){return '<img class="lg" src="'+esc(src)+'" alt="'+esc(n)+'" onerror="var f=document.createElement(\'span\');f.className=\'lg-fb\';f.textContent=this.alt;this.replaceWith(f)">'}
-document.getElementById("aboutlogos").innerHTML=lg("logo-unair.png","UNAIR")+lg("logo-ftmm.png","FTMM UNAIR");
+
+/* ===== DATA YANG BISA DIEDIT (default). Setelah memakai Developer mode, isi terbaru disimpan di content.json ===== */
+var VER="",IMGOVR={},DEFTEXT={},TEXT={};
+var LEAD=[
+{h:"#org-anw",b:"Chairperson",t:"Airlangga Nanotechnology Week (Airnology 3.0), 2024. Led the organizing committee, sponsorship and funding strategy, and partner MoUs."},
+{h:"#org-himano",b:"Head of Scientific Department",t:"Nanotechnology Engineering Student Association (HIMANO), 2024–2025."},
+{h:"#job-brin",b:"Event committee member",t:"three hydrogen FGDs at BRIN with Kementerian ESDM EBTKE, reaching directors and representatives from 100+ energy companies."},
+{h:"#org-argon",b:"Developer and concept lead",t:"ARGON student research group: its organizational grand design and a hydrogen electrolyzer system."}];
+function U(b,ext){return IMGOVR[b]||(b+"."+ext+(VER?"?v="+VER:""))}
+function F(f){return IMGOVR[f]||(f+(VER?"?v="+VER:""))}
+function fmt(t){return esc(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>")}
+function toMd(h){var d=document.createElement("textarea");d.innerHTML=h.replace(/<b>(.*?)<\/b>/g,"**$1**");return d.value}
+function applyText(){document.querySelectorAll("[data-t]").forEach(function(el){var k=el.dataset.t;if(!(k in DEFTEXT))DEFTEXT[k]=el.innerHTML;if(TEXT[k]!==undefined)el.innerHTML=fmt(TEXT[k]);else el.innerHTML=DEFTEXT[k]})}
+function renderAll(){
+document.getElementById("aboutlogos").innerHTML=lg("logo-unair","UNAIR")+lg("logo-ftmm","FTMM UNAIR");
 document.getElementById("grid").innerHTML=PROJECTS.map(function(p){
 return '<article class="card'+(p.pdf?' haspdf':'')+'"'+(p.pdf?' data-pdf="'+esc(p.pdf)+'" data-pt="'+esc(p.t)+'" data-pn="'+esc(p.pn)+'"':'')+' data-c="'+p.c+'">'+'<div class="pjp">'+pic(p.k,p.t,"p")+'</div>'+'<span class="badge">'+esc(p.b)+'</span><h3>'+esc(p.t)+'</h3><p>'+esc(p.p)+'</p>'+(p.l.length?'<ul>'+p.l.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>':'')+'<div class="tags">'+p.g.map(function(x){return '<span>'+esc(x)+'</span>'}).join("")+'</div>'+(p.pdf?'<p class="thn">'+esc(p.pn)+'</p><button class="pdfbtn" type="button">Read thesis (PDF)</button>':'')+(p.l.length?'<button class="tog" aria-expanded="false">Read more</button>':'')+'</article>'}).join("");
 document.querySelector(".filters").innerHTML=FILTERS.map(function(f,i){return '<button class="chip" data-f="'+f[0]+'" aria-pressed="'+(i===0)+'">'+f[1]+'</button>'}).join("");
 document.getElementById("skillbox").innerHTML=SKILLS.map(function(s){return '<div><h3>'+s[0]+'</h3><div class="pills">'+s[1].map(function(x){return '<span>'+esc(x)+'</span>'}).join("")+'</div></div>'}).join("");
-
-/* ===== GAMBAR OTOMATIS (nama file + ekstensi jpg/jpeg/png/webp), BANNER, ZOOM ===== */
-var EXT=["jpg","jpeg","png","webp"];
-function nx(el){var i=+el.dataset.i+1,e=el.dataset.e.split(",");if(i<e.length){el.dataset.i=i;el.src=el.dataset.b+"."+e[i];return}
-var f;if(el.dataset.k==="logo"){f=document.createElement("span");f.className="lg-fb";f.textContent=el.alt}else{f=document.createElement("div");f.className="shot";f.textContent="Photo coming soon"}
-el.replaceWith(f)}
-function pic(b,alt,k){var e=k==="logo"?"png,jpg,jpeg,webp":"jpg,jpeg,png,webp";return '<img class="'+(k==="logo"?"hlg":"zm")+'" data-b="'+b+'" data-i="0" data-e="'+e+'" data-k="'+(k||"")+'" alt="'+esc(alt)+'" src="'+b+"."+e.split(",")[0]+'" onerror="nx(this)" loading="lazy">'}
-function hd(e,sm){return '<div class="hd'+(sm?' sm':'')+'" style="--c:'+e.col+'"><div class="hi"><svg viewBox="0 0 24 24" aria-hidden="true">'+ICON[e.ic]+'</svg></div><div class="hl">'+(e.lt?'<span class="lg-fb">'+esc(e.lt)+'</span>':pic(e.logo,e.n,"logo"))+'</div><div class="d" data-b="'+e.hb+'"><p>'+esc(e.desc)+'</p></div></div>'}
-function setBg(el){var b=el.dataset.b,i=0;(function t(){var im=new Image();im.onload=function(){el.style.backgroundImage='url("'+im.src+'")'};im.onerror=function(){if(++i<EXT.length)t()};im.src=b+"."+EXT[i]})()}
-function photos(b,n){return '<div class="ph2">'+pic(b+"-1",n+" photo 1","p")+'</div><div class="ph2">'+pic(b+"-2",n+" photo 2","p")+'</div>'}
-function expl(e){return '<h3>'+esc(e.t)+'</h3><p class="org">'+esc(e.o)+'</p><ul>'+e.l.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>'}
-function ent(e,org){return '<article class="ent'+(org?' org':'')+'" id="'+e.id+'"><span class="when">'+esc(e.d)+'</span>'+hd(e,org)+(org?'<div class="ob"><div class="obp">'+photos(e.ph,e.n)+'</div><div class="box">'+expl(e)+'</div></div>':'<div class="jb"><div class="box">'+expl(e)+'</div><div class="jp">'+photos(e.ph,e.n)+'</div></div>')+'</article>'}
-function cert(t,s,b){return '<div class="card cc"><div class="cz">'+pic(b,t,"c")+'</div><h3>'+esc(t)+'</h3>'+(s?'<p>'+esc(s)+'</p>':'')+'</div>'}
 document.getElementById("abouthd").innerHTML=hd(ABOUT,false);
 document.getElementById("aboutphoto").innerHTML='<div class="ap">'+pic("foto-about","Wafiy Almas Tsamar in his alma mater jacket","p")+'</div>';
 document.getElementById("work").innerHTML='<div class="tl2">'+WORK.map(function(e){return ent(e,false)}).join("")+'</div>';
@@ -347,6 +342,34 @@ document.getElementById("orgs").innerHTML='<div class="tl2">'+ORGS.map(function(
 document.getElementById("ach").innerHTML=ACH.map(function(a){return cert(a[0],a[1],a[2])}).join("");
 document.getElementById("certs").innerHTML=CERTS.map(function(c){return cert(c[0],"",c[1])}).join("");
 document.querySelectorAll(".hd .d").forEach(setBg);
+document.getElementById("leadlist").innerHTML=LEAD.map(function(x){return '<li>'+(x.h?'<a href="'+esc(x.h)+'">':'')+'<b>'+esc(x.b)+'</b>'+(x.h?'</a>':'')+', '+fmt(x.t)+'</li>'}).join("");
+applyText();
+document.getElementById("heroimg").src=U("foto-profil","jpg");
+document.querySelectorAll("a[download]").forEach(function(a){a.href=F("CV_Wafiy_Almas_Tsamar.pdf")});
+}
+function applyContent(c){["PROJECTS","WORK","ORGS","ACH","CERTS","SKILLS","ABOUT","LEAD","TEXT"].forEach(function(k){if(c[k]!==undefined)window[k]=c[k]});if(c.ver)VER=String(c.ver)}
+function loadContent(){return new Promise(function(res){var done=false;function fin(){if(!done){done=true;res()}}
+setTimeout(fin,2500);
+fetch("content.json?_="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(c){if(c)applyContent(c);fin()}).catch(fin)})}
+function toast(m){var t=document.createElement("div");t.className="toast";t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.remove()},5000)}
+
+/* ===== RENDER ===== */
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function shot(img,label){return img?'<div class="shot"><img src="'+esc(img)+'" alt="'+esc(label)+'" loading="lazy"></div>':'<div class="shot">Photo coming soon</div>'}
+function lg(b,n){return '<img class="lg" data-n="'+esc(b.replace(/^logo-/,""))+'" src="'+U(b,"png")+'" alt="'+esc(n)+'" onerror="var f=document.createElement(\'span\');f.className=\'lg-fb\';f.textContent=this.alt;this.replaceWith(f)">'}
+
+/* ===== GAMBAR OTOMATIS (nama file + ekstensi jpg/jpeg/png/webp), BANNER, ZOOM ===== */
+var EXT=["jpg","jpeg","png","webp"];
+function nx(el){var i=+el.dataset.i+1,e=el.dataset.e.split(",");if(i<e.length){el.dataset.i=i;el.src=U(el.dataset.b,e[i]);return}
+var f;if(el.dataset.k==="logo"){f=document.createElement("span");f.className="lg-fb";f.textContent=el.alt}else{f=document.createElement("div");f.className="shot";f.textContent="Photo coming soon"}
+el.replaceWith(f)}
+function pic(b,alt,k){var e=k==="logo"?"png,jpg,jpeg,webp":"jpg,jpeg,png,webp";return '<img class="'+(k==="logo"?"hlg":"zm")+'" data-b="'+b+'" data-i="0" data-e="'+e+'" data-k="'+(k||"")+'" alt="'+esc(alt)+'" src="'+U(b,e.split(",")[0])+'" onerror="nx(this)" loading="lazy">'}
+function hd(e,sm){return '<div class="hd'+(sm?' sm':'')+'" style="--c:'+e.col+'"><div class="hi"><svg viewBox="0 0 24 24" aria-hidden="true">'+ICON[e.ic]+'</svg></div><div class="hl">'+(e.lt?'<span class="lg-fb">'+esc(e.lt)+'</span>':pic(e.logo,e.n,"logo"))+'</div><div class="d" data-b="'+e.hb+'"><p>'+esc(e.desc)+'</p></div></div>'}
+function setBg(el){var b=el.dataset.b,i=0;(function t(){var im=new Image();im.onload=function(){el.style.backgroundImage='url("'+im.src+'")'};im.onerror=function(){if(++i<EXT.length)t()};im.src=U(b,EXT[i])})()}
+function photos(b,n){return '<div class="ph2">'+pic(b+"-1",n+" photo 1","p")+'</div><div class="ph2">'+pic(b+"-2",n+" photo 2","p")+'</div>'}
+function expl(e){return '<h3>'+esc(e.t)+'</h3><p class="org">'+esc(e.o)+'</p><ul>'+e.l.map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul>'}
+function ent(e,org){return '<article class="ent'+(org?' org':'')+'" id="'+e.id+'"><span class="when">'+esc(e.d)+'</span>'+hd(e,org)+(org?'<div class="ob"><div class="obp">'+photos(e.ph,e.n)+'</div><div class="box">'+expl(e)+'</div></div>':'<div class="jb"><div class="box">'+expl(e)+'</div><div class="jp">'+photos(e.ph,e.n)+'</div></div>')+'</article>'}
+function cert(t,s,b){return '<div class="card cc"><div class="cz">'+pic(b,t,"c")+'</div><h3>'+esc(t)+'</h3>'+(s?'<p>'+esc(s)+'</p>':'')+'</div>'}
 
 /* zoom foto: klik gambar, roda mouse / tombol + - / cubit / klik dua kali; geser untuk menggeser */
 var lb=document.createElement("div");lb.className="lb";lb.hidden=true;lb.setAttribute("role","dialog");lb.setAttribute("aria-label","Image viewer");
@@ -371,13 +394,13 @@ pv.innerHTML='<div class="pvh"><h3></h3><a class="pvo" target="_blank" rel="noop
 document.body.appendChild(pv);
 var pvf=pv.querySelector("iframe"),pvm=pv.querySelector(".pvm");
 function openPV(file,title,note){pv.querySelector("h3").textContent=title;pv.querySelector(".pvn").textContent="Note: this is my thesis, the "+note.replace(/^Thesis \(|\)$/g,"")+".";
-pv.querySelector(".pvo").href=file;pv.querySelector(".pvd").href=file;pvm.className="pvm";pvf.src="about:blank";pv.hidden=false;document.body.style.overflow="hidden";if(file===TH.pdf)try{history.replaceState(null,"","#thesis")}catch(e){}
-function load(){pvf.src=file+"#view=FitH"}
+var u=F(file);pv.querySelector(".pvo").href=u;pv.querySelector(".pvd").href=u;pvm.className="pvm";pvf.src="about:blank";pv.hidden=false;document.body.style.overflow="hidden";if(thesis()&&file===thesis().pdf)try{history.replaceState(null,"","#thesis")}catch(e){}
+function load(){pvf.src=u+"#view=FitH"}
 if(location.protocol==="file:"){load();return}
-fetch(file,{method:"HEAD"}).then(function(r){if(r.ok)load();else throw 0}).catch(function(){pvm.textContent="The PDF is not available yet. Please check back soon.";pvm.className="pvm on"})}
+fetch(u,{method:"HEAD"}).then(function(r){if(r.ok)load();else throw 0}).catch(function(){pvm.textContent="The PDF is not available yet. Please check back soon.";pvm.className="pvm on"})}
 function closePV(){pv.hidden=true;pvf.src="about:blank";document.body.style.overflow="";if(location.hash==="#thesis")try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}}
-var TH=PROJECTS.filter(function(p){return p.pdf})[0];
-function chk(){if(TH&&location.hash==="#thesis"&&pv.hidden)openPV(TH.pdf,TH.t,TH.pn)}
+function thesis(){return PROJECTS.filter(function(p){return p.pdf})[0]}
+function chk(){var TH=thesis();if(TH&&location.hash==="#thesis"&&pv.hidden)openPV(TH.pdf,TH.t,TH.pn)}
 addEventListener("hashchange",chk);chk();
 pv.querySelector(".pvx").onclick=closePV;
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!pv.hidden)closePV()});
@@ -398,9 +421,9 @@ if(del&&ci===0){del=false;wi=(wi+1)%words.length}
 setTimeout(type,del?35:70)}
 if(!still)type();
 
-var chips=document.querySelectorAll(".chip"),cards=document.querySelectorAll("#grid .card");
-chips.forEach(function(c){c.onclick=function(){chips.forEach(function(x){x.setAttribute("aria-pressed",x===c)});cards.forEach(function(k){k.hidden=!(c.dataset.f==="all"||k.dataset.c===c.dataset.f)})}});
-document.querySelectorAll(".tog").forEach(function(b){b.onclick=function(){var o=b.parentNode.classList.toggle("open");b.setAttribute("aria-expanded",o);b.textContent=o?"Show less":"Read more"}});
+document.addEventListener("click",function(e){var c=e.target.closest&&e.target.closest(".chip");
+if(c){document.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed",x===c)});document.querySelectorAll("#grid .card").forEach(function(k){k.hidden=!(c.dataset.f==="all"||k.dataset.c===c.dataset.f)});return}
+var t=e.target.closest&&e.target.closest(".tog");if(t){var o=t.parentNode.classList.toggle("open");t.setAttribute("aria-expanded",o);t.textContent=o?"Show less":"Read more"}});
 
 var btns=document.querySelectorAll(".btn");
 if(!still)addEventListener("mousemove",function(e){btns.forEach(function(b){var r=b.getBoundingClientRect(),dx=Math.max(r.left-e.clientX,0,e.clientX-r.right),dy=Math.max(r.top-e.clientY,0,e.clientY-r.bottom),n=Math.max(0,1-Math.sqrt(dx*dx+dy*dy)/80);if(n>.02)b.style.setProperty("--n",n.toFixed(2));else b.style.removeProperty("--n")})});
@@ -432,6 +455,14 @@ hero.addEventListener("mousemove",mv);hero.addEventListener("touchmove",mv,{pass
 hero.addEventListener("mouseleave",function(){mx=my=-999});
 requestAnimationFrame(draw);
 })();
+
+/* ===== DEVELOPER MODE (dev.js dimuat hanya saat menu Developer dibuka) ===== */
+window.SITE={get:function(){return{PROJECTS:PROJECTS,WORK:WORK,ORGS:ORGS,ACH:ACH,CERTS:CERTS,SKILLS:SKILLS,ABOUT:ABOUT,LEAD:LEAD,TEXT:TEXT}},
+render:function(){renderAll()},ver:function(){return VER},setVer:function(v){VER=String(v)},IMGOVR:IMGOVR,defText:function(){return DEFTEXT},EXT:EXT,U:U,toMd:toMd,icons:function(){return Object.keys(ICON)},toast:toast};
+function openDev(){if(window.DEV){DEV.open();return}var s=document.createElement("script");s.src="dev.js?v=1";s.onload=function(){if(window.DEV)DEV.open()};s.onerror=function(){toast("Developer mode file (dev.js) was not found. Upload dev.js to the same place as index.html.")};document.head.appendChild(s)}
+document.addEventListener("click",function(e){if(e.target.closest&&e.target.closest("#devlink,#devnav")){e.preventDefault();openDev()}});
+addEventListener("hashchange",function(){if(location.hash==="#dev")openDev()});
+loadContent().then(function(){renderAll();chk();if(location.hash==="#dev")openDev()});
 </script>
 </body>
 </html>
