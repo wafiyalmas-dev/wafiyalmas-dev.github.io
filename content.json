@@ -1,0 +1,499 @@
+{
+ "ver": 1793979736575,
+ "PROJECTS": [
+  {
+   "c": "research",
+   "b": "Research project · Aug 2025 – Feb 2026",
+   "k": "project-baterai",
+   "t": "Li-ion battery recycling: hydrometallurgy and pyrometallurgy",
+   "p": "Recycling of NMC, LCO, LMO and LFP cathodes, from thermal treatment to selective metal separation.",
+   "l": [
+    "Thermal treatment, carbothermic reduction, H3PO4 and H2SO4 leaching, and oxalic-acid precipitation.",
+    "Ni-Mn separation with Cyanex 272 by solvent extraction (SX).",
+    "Studied H2O2 as a reducing agent and its effect on metal recovery.",
+    "Characterized with XRD, XPS, SEM-EDS, XRF, ICP-MS and BET.",
+    "Linked manganese oxidation-state changes to material stability and leaching behavior."
+   ],
+   "g": [
+    "Battery recycling",
+    "Hydrometallurgy",
+    "Solvent extraction"
+   ],
+   "img": ""
+  },
+  {
+   "c": "research",
+   "b": "Research project · May 2025 – Jun 2026",
+   "k": "project-hidrogen-arduino",
+   "t": "Arduino-based automated hydrogen measurement system",
+   "p": "A low-cost system that measures hydrogen volume automatically during catalyst tests.",
+   "l": [
+    "Tested catalysts in alkaline conditions through NaBH4 hydrolysis at various temperatures.",
+    "Built the system with C++, ultrasonic sensors and the water displacement method.",
+    "Automated data logging to Microsoft Excel.",
+    "Calculated the Hydrogen Generation Rate (HGR) from the data."
+   ],
+   "g": [
+    "Arduino",
+    "C++",
+    "Hydrogen",
+    "Catalysts"
+   ],
+   "img": ""
+  },
+  {
+   "c": "research",
+   "b": "Nanomaterials project · May 2025 – Jul 2026",
+   "k": "project-nimn-nio",
+   "t": "NiMn/NiO nanostructures using an AAO template",
+   "p": "Fabrication of NiMn/NiO nanostructures in anodic aluminum oxide templates by electrocoating.",
+   "l": [
+    "Aluminum anodization, pore widening and electrodeposition experiments.",
+    "Evaluated the electrochemical parameters that affect nanostructure formation."
+   ],
+   "g": [
+    "AAO template",
+    "Electrodeposition",
+    "Nanostructures"
+   ],
+   "img": ""
+  },
+  {
+   "c": "research",
+   "k": "project-mof-curcumin",
+   "b": "Research project",
+   "t": "MOF Multifungsi Berbasis Demetoksikurkumin untuk Teranostik pada Kanker Kolorektal",
+   "p": "Nanopartikel Bio-MOF berbasis demetoksikurkumin sebagai sistem penghantaran obat multifungsi (drug delivery system) untuk theranostik kanker kolorektal.",
+   "l": [
+    "Penelitian mencakup sintesis dan fungsionalisasi nanopartikel, pemuatan doxorubicin, serta pengembangan strategi penargetan kanker melalui PEGylation dan konjugasi aptamer."
+   ],
+   "g": [
+    "Bio-MOF",
+    "Drug delivery",
+    "Theranostics",
+    "Doxorubicin"
+   ],
+   "img": ""
+  },
+  {
+   "c": "research",
+   "b": "Research · AmrilLab, Sep 2024 – Apr 2025",
+   "k": "project-solar-amrillab",
+   "t": "Semiconductor nanomaterials for solar cells and photocatalysis",
+   "p": "Synthesis and testing of materials for thin-film solar cells and photocatalysis.",
+   "l": [
+    "Synthesized CZTS, Ni-doped CZTS, BiOBr and Al-doped ZnO.",
+    "Evaluated solar cell performance with a solar simulator: PCE, FF, Voc and J-V curves.",
+    "Documented systematic tests and data analysis."
+   ],
+   "g": [
+    "CZTS",
+    "Solar cells",
+    "Photocatalysis"
+   ],
+   "img": ""
+  },
+  {
+   "c": "publication",
+   "b": "Co-author · under review",
+   "k": "project-review-kirigami",
+   "t": "Kirigami and origami-inspired structures for (flexible) batteries and supercapacitors",
+   "p": "Review article on folding and cutting designs that make energy storage devices flexible.",
+   "l": [],
+   "g": [
+    "Flexible batteries",
+    "Supercapacitors",
+    "Review"
+   ],
+   "img": ""
+  },
+  {
+   "c": "publication",
+   "b": "Co-author · under review",
+   "k": "project-review-textile",
+   "t": "Crafting a solar cell device integrated textile",
+   "p": "Review article on building solar cells into fabrics for wearable power.",
+   "l": [],
+   "g": [
+    "Solar textile",
+    "Wearables",
+    "Review"
+   ],
+   "img": ""
+  },
+  {
+   "c": "publication",
+   "b": "In preparation · data collected and analyzed",
+   "k": "project-recovery-logam",
+   "t": "Recovery of Metals From Spent Li-ion Batteries Using Hydrometallurgy and Their Utilization as NiMn/NiO Nanocatalysts for NaBH₄ Hydrolysis in Hydrogen Production",
+   "p": "Manuscript in preparation. Data collection and data analysis are complete, and the paper is being written.",
+   "l": [],
+   "g": [
+    "Li-ion recycling",
+    "Nanocatalysts",
+    "Hydrogen production"
+   ],
+   "img": "",
+   "pdf": "thesis-recovery-logam.pdf",
+   "pn": "Thesis (original version, before translation and journal submission)"
+  },
+  {
+   "c": "student",
+   "b": "ARGON · May – Jul 2025",
+   "k": "project-electrolyzer",
+   "t": "Hydrogen electrolyzer project",
+   "p": "Led the conceptual design and coordination of a hydrogen-based electrolyzer system in the student research group.",
+   "l": [
+    "Coordinated project development across the group.",
+    "Worked with the sensors and electronics division."
+   ],
+   "g": [
+    "Electrolyzer",
+    "Hydrogen",
+    "Team lead"
+   ],
+   "img": ""
+  },
+  {
+   "c": "student",
+   "k": "project-nanokitosan",
+   "b": "Pengmas SDGs Universitas Airlangga 2025 · BEM FTMM & ARGON",
+   "t": "Inovasi Pupuk Nanokitosan Berbasis Limbah Sisik Ikan untuk Mendukung Pertanian Berkelanjutan di Dusun Karangploso, Desa Ngerong",
+   "p": "Proyek pendanaan Call for Pengmas SDGs Universitas Airlangga 2025 oleh BEM FTMM & ARGON UNAIR.",
+   "l": [],
+   "g": [
+    "Nanokitosan",
+    "Pupuk",
+    "Limbah sisik ikan",
+    "Pertanian berkelanjutan"
+   ],
+   "img": ""
+  },
+  {
+   "c": "student",
+   "b": "PKM-GFT 2024 · funded by Kemdiktisaintek",
+   "k": "project-smart-rice",
+   "t": "Smart Rice Estate",
+   "p": "A concept using AI-based automation and nanotechnology to improve rice quality and yield for national rice self-sufficiency.",
+   "l": [],
+   "g": [
+    "AI",
+    "Nanotechnology",
+    "Agriculture"
+   ],
+   "img": ""
+  }
+ ],
+ "WORK": [
+  {
+   "id": "job-brin",
+   "col": "#d95f4e",
+   "ic": "sci",
+   "logo": "logo-brin",
+   "n": "BRIN",
+   "hb": "header-brin",
+   "ph": "foto-brin",
+   "desc": "Badan Riset dan Inovasi Nasional (BRIN) is an Indonesian government institution responsible for coordinating and advancing national research, development, and innovation across various scientific and technological fields. BRIN aims to strengthen Indonesia’s research ecosystem through scientific collaboration, technological advancement, and the development of innovative solutions to support national development and global competitiveness.",
+   "d": "Aug 2025 – Jul 2026",
+   "t": "Research Intern (MBKM) and Event Committee Member",
+   "o": "BRIN, South Tangerang",
+   "l": [
+    "Researched hydrogen technology, fuel cells, electrolyzers and catalytic materials.",
+    "Organizing committee member for three hydrogen technology FGDs with Kementerian ESDM EBTKE and directors from 100+ companies.",
+    "Experimental planning, lab work, data interpretation and scientific communication."
+   ]
+  },
+  {
+   "id": "job-ifhe",
+   "col": "#3fa4e8",
+   "ic": "h2",
+   "logo": "logo-ifhe",
+   "n": "IFHE",
+   "hb": "header-ifhe",
+   "ph": "foto-ifhe",
+   "desc": "Indonesia Fuel Cell and Hydrogen Energy (IFHE) is an organization dedicated to advancing fuel cell and hydrogen technologies in Indonesia to support the development of sustainable energy solutions. It promotes research collaboration, technological innovation, and stakeholder engagement while contributing to hydrogen energy development and the national energy transition.",
+   "d": "Oct 2025 – Apr 2026",
+   "t": "Exhibitor",
+   "o": "Indonesia Fuel Cell and Hydrogen Energy (IFHE), Serpong",
+   "l": [
+    "Exhibitor and booth staff representing BRIN and IFHE at an event at ICE BSD, Tangerang."
+   ]
+  },
+  {
+   "id": "job-amrillab",
+   "col": "#6b4f4a",
+   "ic": "sun",
+   "logo": "logo-amrillab",
+   "n": "AmrilLab",
+   "hb": "header-amrillab",
+   "ph": "foto-amrillab",
+   "desc": "AmrilLab is a university-based research laboratory focused on advanced materials and nanotechnology, particularly in the development and application of functional solid-state materials for energy technologies. Its research activities include material synthesis, thin-film fabrication, material characterization, and photovoltaic performance evaluation, supporting innovation in solar-cell technology, solid-state materials engineering, and advanced energy applications.",
+   "d": "Sep 2024 – Apr 2025",
+   "t": "Research Assistant",
+   "o": "Amrillah Renewable Energy Research Group (AmrilLab), Surabaya",
+   "l": [
+    "Synthesized and characterized semiconductor nanomaterials for thin-film solar cells and photocatalysis, including CZTS, Ni-doped CZTS, BiOBr and Al-doped ZnO.",
+    "Evaluated solar cell performance with a solar simulator: PCE, FF, Voc and J-V curves.",
+    "Co-authored two review articles, both under review."
+   ]
+  }
+ ],
+ "ORGS": [
+  {
+   "id": "org-argon",
+   "col": "#c0583a",
+   "ic": "atom",
+   "logo": "logo-argon",
+   "n": "ARGON",
+   "hb": "header-argon",
+   "ph": "foto-argon",
+   "desc": "ARGON (Airlangga Student Research Group of Nanotechnology) is a Universitas Airlangga student community dedicated to advancing nanotechnology research through skill development, research collaboration, and innovation. It aims to establish a leading nanotechnology research center by fostering proprietary innovations, reputable publications, and public engagement in nanotechnology.",
+   "d": "Feb 2025 – Dec 2025",
+   "t": "Developer and Researcher, Sensors and Electronics Division",
+   "o": "ARGON, Universitas Airlangga",
+   "l": [
+    "Developed ARGON’s organizational grand design.",
+    "Researcher in the Sensors and Electronics Division, contributing to electronics and sensor activities.",
+    "Concept developer: led the conceptual design and coordination of a hydrogen-based electrolyzer system."
+   ]
+  },
+  {
+   "id": "org-himano",
+   "col": "#b9a45e",
+   "ic": "team",
+   "logo": "logo-himano",
+   "n": "HIMANO",
+   "hb": "header-himano",
+   "ph": "foto-himano",
+   "desc": "HIMANO (Himpunan Mahasiswa Rekayasa Nanoteknologi) is a student organization at Universitas Airlangga that serves as a platform for academic development, student representation, and collaboration among nanotechnology engineering students. It facilitates professional growth, knowledge sharing, organizational leadership, and networking to support students’ academic and career development.",
+   "d": "Feb 2024 – Dec 2025",
+   "t": "Head of Scientific Department",
+   "o": "Nanotechnology Engineering Student Association (HIMANO)",
+   "l": [
+    "Led the scientific department and coordinated research and academic activities.",
+    "Planned and ran departmental programs with members."
+   ]
+  },
+  {
+   "id": "org-anw",
+   "col": "#52575b",
+   "ic": "stage",
+   "logo": "logo-anw",
+   "n": "ANW",
+   "hb": "header-anw",
+   "ph": "foto-anw",
+   "desc": "Airlangga Nanotechnology Week (ANW) is a university-scale event organized by Universitas Airlangga to promote nanotechnology research, innovation, and scientific collaboration among students, academics, and industry stakeholders. The event serves as a platform for sharing scientific insights, showcasing technological developments, and fostering interdisciplinary collaboration to advance nanotechnology awareness and applications.",
+   "d": "Feb 2024 – Sep 2024",
+   "t": "Chairperson",
+   "o": "Airlangga Nanotechnology Week 3.0, part of Airnology 3.0",
+   "l": [
+    "Led the organizing committee and cross-functional teams throughout planning and execution.",
+    "Oversaw event operations, sponsorship and funding strategies.",
+    "Drafted MoUs for event partnerships and coordinated with external stakeholders."
+   ]
+  },
+  {
+   "id": "org-colab",
+   "col": "#447a9a",
+   "ic": "speak",
+   "logo": "logo-colab",
+   "n": "COLAB FTMM",
+   "hb": "header-colab",
+   "ph": "foto-colab",
+   "desc": "Colab FTMM (Collaborative Open House for Learning and Academic Building) is an educational outreach program organized by the Faculty of Advanced Technology and Multidiscipline (FTMM), Universitas Airlangga, to introduce high school students to its academic programs, career prospects, research facilities, and student organizations. The program provides opportunities for students to explore the university environment through academic presentations, laboratory and faculty tours, interactive discussions, and student project showcases, encouraging collaboration and inspiring future generations to pursue innovation and higher education.",
+   "d": "Sep 2024",
+   "t": "Speaker",
+   "o": "COLAB FTMM 2024, BEM FTMM UNAIR",
+   "l": [
+    "Speaker at COLAB FTMM 2024."
+   ]
+  },
+  {
+   "id": "org-tutoring",
+   "col": "#3c5594",
+   "ic": "board",
+   "logo": "logo-tutoring",
+   "n": "Tutoring Class",
+   "hb": "header-tutoring",
+   "ph": "foto-tutoring",
+   "desc": "Tutoring Class is a peer-learning and tutoring program designed to support students’ academic development through collaborative learning, knowledge sharing, and interactive teaching sessions. The program aims to strengthen subject comprehension, improve academic performance, and foster a supportive learning environment among students.",
+   "d": "May 2023 – Jun 2023",
+   "t": "Person in Charge (PIC), Tutoring Class Program",
+   "o": "HIMANO",
+   "l": [
+    "Coordinated the implementation of the tutoring class program."
+   ]
+  },
+  {
+   "id": "org-outreach",
+   "col": "#46958a",
+   "ic": "heart",
+   "logo": "logo-outreach",
+   "n": "Community Outreach",
+   "hb": "header-outreach",
+   "ph": "foto-outreach",
+   "desc": "Community Outreach is a social engagement initiative aimed at creating positive impacts in local communities through educational activities, knowledge sharing, and collaborative projects. The program encourages active participation in addressing social challenges while promoting awareness, empowerment, and sustainable community development.",
+   "d": "Sep 2023 – Jun 2025",
+   "t": "Community service and outreach",
+   "o": "Surabaya and Pasuruan",
+   "l": [
+    "Jun 2025, BEM FTMM x ARGON outreach, Gempol, Pasuruan: taught nanochitosan fertilizer production, from raw materials to a farmer-ready product, supported by SDGs UNAIR funding.",
+    "Dec 2024 – Jan 2025, Belajar Bersama Komunitas (BBK), Sambikerep, Surabaya: taught mathematics to students and basic economics to local residents.",
+    "Sep 2023, Sutorejo, Surabaya: promoted zero-waste living by teaching how organic waste becomes biogas."
+   ]
+  }
+ ],
+ "ACH": [
+  [
+   "Kompetisi Ilmiah Mahasiswa (KIM) 2025",
+   "Finalist · Universitas Airlangga",
+   "sertifikat-kim-2025"
+  ],
+  [
+   "Program Kreativitas Mahasiswa (PKM-GFT) 2024",
+   "Incentive recipient · Kemdiktisaintek",
+   "sertifikat-pkm-2024"
+  ],
+  [
+   "International Youth Summit 2024",
+   "Finalist · Kuala Lumpur, Malaysia",
+   "sertifikat-iys-2024"
+  ]
+ ],
+ "CERTS": [
+  [
+   "Supply Chain: MPS, RCCP, MRP, DRP, BOM",
+   "sertifikat-supply-chain"
+  ],
+  [
+   "How to Read P&ID, PFD & BFD Used in a Process Plant",
+   "sertifikat-pid-pfd-bfd"
+  ],
+  [
+   "Measuring Manufacturing Effectiveness: OEE, OOE, and TEEP",
+   "sertifikat-oee"
+  ],
+  [
+   "Lean Six Sigma Black Belt",
+   "sertifikat-lean-six-sigma"
+  ],
+  [
+   "ISO/IEC 17025: Laboratory Management Systems",
+   "sertifikat-iso-17025"
+  ],
+  [
+   "ISO 9001:2026: Quality Management System",
+   "sertifikat-iso-9001"
+  ],
+  [
+   "Unit Operations in Chemical Engineering",
+   "sertifikat-unit-operations"
+  ],
+  [
+   "Basic Occupational Safety and Health (K3) Awareness",
+   "sertifikat-k3"
+  ],
+  [
+   "Job Safety Analysis (JSA) and HIRADC Awareness",
+   "sertifikat-jsa-hiradc"
+  ],
+  [
+   "Personal Protective Equipment (PPE/APD) Awareness",
+   "sertifikat-ppe"
+  ],
+  [
+   "Design and Analysis of Experiments (DoE)",
+   "sertifikat-doe"
+  ],
+  [
+   "English Language Proficiency Test (ELPT)",
+   "sertifikat-elpt"
+  ]
+ ],
+ "SKILLS": [
+  [
+   "Data and software",
+   [
+    "Microsoft Excel",
+    "OriginPro",
+    "Python",
+    "C++",
+    "SOLIDWORKS",
+    "Gaussian",
+    "BIOVIA Materials Studio",
+    "HyperChem",
+    "ImageJ",
+    "DWISM"
+   ]
+  ],
+  [
+   "Characterization",
+   [
+    "XRD",
+    "XPS",
+    "SEM-EDS",
+    "XRF",
+    "ICP-MS",
+    "BET",
+    "UV-Vis",
+    "FTIR",
+    "Solar simulator (J-V)"
+   ]
+  ],
+  [
+   "Technical knowledge",
+   [
+    "Li-ion battery technology",
+    "Battery recycling",
+    "Hydrometallurgy",
+    "Pyrometallurgy",
+    "Hydrogen technology",
+    "Solar cells"
+   ]
+  ],
+  [
+   "Professional",
+   [
+    "Teamwork",
+    "Communication",
+    "Public speaking",
+    "Time management",
+    "Analytical thinking",
+    "Problem solving",
+    "Project coordination",
+    "Scientific writing",
+    "Leadership"
+   ]
+  ]
+ ],
+ "ABOUT": {
+  "col": "#0b7f78",
+  "ic": "cap",
+  "lt": "Wafiy Almas Tsamar",
+  "hb": "header-about",
+  "desc": "S.T. in Nanotechnology Engineering from Universitas Airlangga (GPA 3.52/4.00), with research experience in advanced materials, battery recycling, hydrogen energy and solar cells."
+ },
+ "LEAD": [
+  {
+   "h": "#org-anw",
+   "b": "Chairperson",
+   "t": "Airlangga Nanotechnology Week (Airnology 3.0), 2024. Led the organizing committee, sponsorship and funding strategy, and partner MoUs."
+  },
+  {
+   "h": "#org-himano",
+   "b": "Head of Scientific Department",
+   "t": "Nanotechnology Engineering Student Association (HIMANO), 2024–2025."
+  },
+  {
+   "h": "#job-brin",
+   "b": "Event committee member",
+   "t": "three hydrogen FGDs at BRIN with Kementerian ESDM EBTKE, reaching directors and representatives from 100+ energy companies."
+  },
+  {
+   "h": "#org-argon",
+   "b": "Developer and concept lead",
+   "t": "ARGON student research group: its organizational grand design and a hydrogen electrolyzer system."
+  }
+ ],
+ "TEXT": {}
+}
