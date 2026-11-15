@@ -206,7 +206,7 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 </div>
 <header><nav aria-label="Main">
 <a class="logo" href="#top">Wafiy Almas</a>
-<a class="l" href="#about">About</a><a class="l" href="#experience">Experience</a><a class="l" href="#projects">Projects</a><a class="l" href="#organizations">Organizations</a><a class="l" href="#achievements">Certificates</a><a class="l" href="#contact">Contact</a>
+<a class="l" href="#about">About</a><a class="l" href="#experience">Experience</a><a class="l" href="#projects">Projects</a><a class="l" href="#organizations">Organizations</a><a class="l" href="#achievements">Achievements</a><a class="l" href="#certificates">Certificates</a><a class="l" href="#contact">Contact</a>
 <a class="l" id="devnav" href="#dev">Developer</a>
 <button id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
 </nav></header>
@@ -256,10 +256,10 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 <section id="organizations"><h2>Organization experience</h2>
 <div id="orgs"></div></section>
 
-<section id="achievements"><h2>Achievements and certificates</h2>
-<h3 class="g" style="margin-top:0">Achievements</h3>
-<div class="certs big" id="ach"></div>
-<h3 class="g">Certifications and training</h3>
+<section id="achievements"><h2>Achievements</h2>
+<div class="certs big" id="ach"></div></section>
+
+<section id="certificates"><h2>Certifications and training</h2>
 <div class="certs" id="certs"></div></section>
 
 <section id="contact" class="contact"><h2>Let’s work together</h2>
@@ -462,7 +462,11 @@ render:function(){renderAll()},ver:function(){return VER},setVer:function(v){VER
 function openDev(){if(window.DEV){DEV.open();return}var s=document.createElement("script");s.src="dev.js?v=1";s.onload=function(){if(window.DEV)DEV.open()};s.onerror=function(){toast("Developer mode file (dev.js) was not found. Upload dev.js to the same place as index.html.")};document.head.appendChild(s)}
 document.addEventListener("click",function(e){if(e.target.closest&&e.target.closest("#devlink,#devnav")){e.preventDefault();openDev()}});
 addEventListener("hashchange",function(){if(location.hash==="#dev")openDev()});
-loadContent().then(function(){renderAll();chk();if(location.hash==="#dev")openDev()});
+var userMoved=false;["wheel","touchstart","keydown","mousedown"].forEach(function(ev){addEventListener(ev,function(){userMoved=true},{passive:true})});
+function goHash(){if(userMoved)return;var h=location.hash.slice(1);if(!h||h==="thesis"||h==="dev")return;var e=document.getElementById(h);if(!e)return;var sb=document.documentElement.style.scrollBehavior;document.documentElement.style.scrollBehavior="auto";e.scrollIntoView();document.documentElement.style.scrollBehavior=sb}
+addEventListener("hashchange",function(){userMoved=false;setTimeout(goHash,50)});
+addEventListener("load",function(){goHash();setTimeout(goHash,900)});
+loadContent().then(function(){renderAll();chk();goHash();if(location.hash==="#dev")openDev()});
 </script>
 </body>
 </html>
