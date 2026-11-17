@@ -1,5 +1,5 @@
 {
- "ver": 1794762588368,
+ "ver": 1794886183605,
  "PROJECTS": [
   {
    "c": "research",
@@ -182,6 +182,21 @@
     "Agriculture"
    ],
    "img": ""
+  },
+  {
+   "c": "student",
+   "b": "",
+   "t": "RKEF_Case Study",
+   "p": "RKEF Metal & Energy Balance with DMAIC Improvement Study. This is a literature-based model of a nickel laterite RKEF line (dryer, rotary kiln, electric furnace). It tracks nickel, iron and energy from ore to ferronickel, tests how key parameters affect the results, and applies DMAIC to an improvement scenario. Built in Excel with live formulas. Assumptions come from published sources (Hatch, ISIJ International, Minerals, Energies).",
+   "l": [
+    "this model is built from published literature, not from data of a real smelter. Every input and its source is listed in the",
+    "companion workbook (RKEF_Metal_Energy_Balance_DMAIC_Wafiy.xlsx), where all results recalculate from the inputs."
+   ],
+   "g": [],
+   "img": "",
+   "k": "project-f4czs",
+   "pn": "View Project",
+   "pdf": "RKEF Metal & Energy Balance with DMAIC Improvement Study"
   }
  ],
  "WORK": [
